@@ -1,0 +1,6 @@
+framework module Pods_Assault_Prevention {
+  umbrella header "Pods-Assault Prevention-umbrella.h"
+
+  export *
+  module * { export * }
+}
