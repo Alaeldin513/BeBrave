@@ -53,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return GIDSignIn.sharedInstance().handle(url,
                                                  sourceApplication: sourceApplication,
                                                  annotation: annotation)
-    }
+        }
     
 
     func applicationWillResignActive(_ application: UIApplication) {
