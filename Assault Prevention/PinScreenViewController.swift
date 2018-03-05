@@ -61,6 +61,7 @@ class PinScreenViewController: UIViewController {
             pinPostionFour.isHidden = false
             var pin = pinPostionOne.text! + pinPostionTwo.text! + pinPostionThree.text! + pinPostionFour.text!
             print(pin)
+            performSegue(withIdentifier: "userInfoSegue", sender: nil)
             return
         }
         

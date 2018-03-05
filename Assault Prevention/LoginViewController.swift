@@ -37,9 +37,10 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
 
     override func viewWillAppear(_ animated: Bool) {
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
-            if let user = user {
-                self.performSegue(withIdentifier: "appMainPage", sender: self)
-            }
+            print(auth.currentUser?.uid)
+//            if let user = user {
+//                self.performSegue(withIdentifier: "appMainPage", sender: self)
+//            }
             
         }
     }
@@ -63,12 +64,6 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
                 let nsError = error! as NSError
                 self.errorMessage.text = AuthErrorCode(rawValue: nsError.code)?.errorMessage
                 return
-            }
-            user?.link(with: credential) { (user, error) in
-                if error != nil {
-                    print(error)
-                }
-                
             }
            self.performSegue(withIdentifier: "appMainPage", sender: self)
         }

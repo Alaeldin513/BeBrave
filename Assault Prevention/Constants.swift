@@ -14,17 +14,33 @@ class Constants: NSObject {
     
     struct User {
         var user = Auth.auth().currentUser
-        var email: String
-        var password: String
         var name: String
-        var phoneNumber: String
+        var email: String
+        var password: String?
+        var firstName: String?
+        var lastName: String?
+        var phoneNumber: String?
+        var height: String?
+        var weight: String?
+        var hairColor: String?
+        var eyeColor: String?
         
-        init (name: String, password: String, email: String, phoneNumber: String){
+    
+        
+        init (name: String, password: String, email: String, phoneNumber: String ){
             self.name = name
             self.email = email
             self.password = password
             self.phoneNumber = phoneNumber
+            return
         }
+        
+//        init(firstName:String, lastName: String, phoneNumber: String, height: String, weight: String, hairColor: String, eyeColor: String) {
+//            self.firstName = firstName
+//            self.lastName = lastName
+//            self.phoneNumber = phoneNumber
+//            
+//        }
     }
 
 }

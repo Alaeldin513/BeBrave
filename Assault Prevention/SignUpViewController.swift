@@ -10,8 +10,12 @@ import Foundation
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
+
 
 class SignUpViewcontroller: UIViewController, UITextFieldDelegate {
+    
+    var ref: DatabaseReference!
     
     struct User {
         var user = Auth.auth().currentUser
@@ -46,6 +50,7 @@ class SignUpViewcontroller: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         submitButton.layer.borderWidth = 5
         submitButton.layer.cornerRadius = 15
+        ref = Database.database().reference()
     }
     
     
@@ -76,8 +81,13 @@ class SignUpViewcontroller: UIViewController, UITextFieldDelegate {
     // Mark: - Firebase Sign Up
     @IBAction func signUpContinue(_ sender: Any) {
         
-        guard let email = self.email, let password = self.password, let phoneNumber = self.phoneNumber, let name = self.name else{
+        guard let email = self.email, let password = self.password, let name = self.name else {
             errorMessage.text = "Please fill all the fields"
+            return
+        }
+        
+        guard let phoneNumber = self.phoneNumber, self.phoneNumber?.count == 10 else {
+            errorMessage.text = "Please enter a valid phone number"
             return
         }
         
@@ -90,11 +100,10 @@ class SignUpViewcontroller: UIViewController, UITextFieldDelegate {
             
             if error == nil {
                 let newUser = User(name: name, password: password, email: email, phoneNumber: phoneNumber )
-                print(newUser.email, newUser.name, newUser.phoneNumber)
-                
-                Auth.auth().currentUser?.sendEmailVerification { (error) in
-                    // ...
-                }
+                self.ref.child("users").child((user?.uid)!).setValue(["Name": newUser.name,
+                                                                      "phone": newUser.phoneNumber,
+                                                                      "Email": newUser.email])
+                Auth.auth().currentUser?.sendEmailVerification { (error) in}
                 self.performSegue(withIdentifier: "appMainPage", sender: self)
             } else {
                 let error = error as NSError?
