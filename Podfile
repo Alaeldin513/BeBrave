@@ -8,6 +8,7 @@ target 'Assault Prevention' do
   # Pods for Assault Prevention
 	pod 'Firebase/Core'
 	pod 'Firebase/Auth'
+	pod 'Firebase/Database'
 	pod 'GoogleSignIn'
     pod 'FacebookCore', '~> 0.2'
     pod 'FacebookLogin', '~> 0.2'

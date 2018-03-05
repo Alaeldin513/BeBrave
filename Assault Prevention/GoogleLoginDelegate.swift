@@ -32,7 +32,6 @@ extension LoginViewController: GIDSignInDelegate {
                 if (error != nil) {
                     print(error)
                 }
-                
             }
             guard let uid = user?.uid else { return }
             print("Succesly login", uid)
@@ -50,8 +49,4 @@ extension LoginViewController: GIDSignInDelegate {
             userInfo: ["statusText": "User has disconnected."])
         // [END_EXCLUDE]
     }
-    
-    
-    
-
 }

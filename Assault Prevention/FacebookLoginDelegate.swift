@@ -17,13 +17,16 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
         guard let accessToken = FBSDKAccessToken.current()?.tokenString else {return}
         
         let credential = FacebookAuthProvider.credential(withAccessToken: accessToken)
+        
+       
+        
         Auth.auth().signIn(with: credential, completion: { (user,err) in
-
+           
             guard err == nil else {
                 self.errorMessage.text = "Facebook firebase auth error with acces token! \n \(err.debugDescription)"
                 return
             }
-            
+           
             FBSDKGraphRequest(graphPath: "/me" , parameters: ["fields":"id,name,email"]).start( completionHandler: { (connection, result, graphError) in
                 guard graphError == nil else{
                    self.errorMessage.text = "failed graph request"
