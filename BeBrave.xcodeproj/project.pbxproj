@@ -56,7 +56,7 @@
 		5ACADB297335B3FE5ACDD290 /* Pods-Assault PreventionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Assault PreventionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Assault PreventionTests/Pods-Assault PreventionTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6921B3421FDC6F40007F0BAF /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		6921B3441FEB72F9007F0BAF /* PinScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinScreenViewController.swift; sourceTree = "<group>"; };
-		692578B01FD247CE0063BFC1 /* Assault Prevention.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Assault Prevention.entitlements"; sourceTree = "<group>"; };
+		692578B01FD247CE0063BFC1 /* BeBrave.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BeBrave.entitlements; sourceTree = "<group>"; };
 		692600A41F696ECC009B8400 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		697D89721F4542420019D14D /* GoogleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
 		697D89751F45DFD30019D14D /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		697D897B1F460F020019D14D /* GoogleLoginDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleLoginDelegate.swift; sourceTree = "<group>"; };
 		697D897D1F46892C0019D14D /* DesignableUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableUIView.swift; sourceTree = "<group>"; };
 		699BFE0C1FF1CBD500BEB844 /* UserInformationFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationFormViewController.swift; sourceTree = "<group>"; };
-		69E929C81F0B05FE00EFC42A /* Assault Prevention.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Assault Prevention.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		69E929C81F0B05FE00EFC42A /* BeBrave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeBrave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E929CB1F0B05FE00EFC42A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69E929CD1F0B05FE00EFC42A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		69E929D01F0B05FE00EFC42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -155,9 +155,9 @@
 		69E929BF1F0B05FE00EFC42A = {
 			isa = PBXGroup;
 			children = (
-				69E929CA1F0B05FE00EFC42A /* Assault Prevention */,
-				69E929E21F0B05FE00EFC42A /* Assault PreventionTests */,
-				69E929ED1F0B05FE00EFC42A /* Assault PreventionUITests */,
+				69E929CA1F0B05FE00EFC42A /* BeBrave */,
+				69E929E21F0B05FE00EFC42A /* BeBraveTests */,
+				69E929ED1F0B05FE00EFC42A /* BeBraveUITests */,
 				69E929C91F0B05FE00EFC42A /* Products */,
 				023E39A5D854D5E6B9482CE7 /* Pods */,
 				36B2C4B7FEA82CA9E9585205 /* Frameworks */,
@@ -167,17 +167,17 @@
 		69E929C91F0B05FE00EFC42A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				69E929C81F0B05FE00EFC42A /* Assault Prevention.app */,
+				69E929C81F0B05FE00EFC42A /* BeBrave.app */,
 				69E929DF1F0B05FE00EFC42A /* Assault PreventionTests.xctest */,
 				69E929EA1F0B05FE00EFC42A /* Assault PreventionUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		69E929CA1F0B05FE00EFC42A /* Assault Prevention */ = {
+		69E929CA1F0B05FE00EFC42A /* BeBrave */ = {
 			isa = PBXGroup;
 			children = (
-				692578B01FD247CE0063BFC1 /* Assault Prevention.entitlements */,
+				692578B01FD247CE0063BFC1 /* BeBrave.entitlements */,
 				69E929CB1F0B05FE00EFC42A /* AppDelegate.swift */,
 				697D89741F45DE4C0019D14D /* IBDesignable */,
 				69E92A041F11298200EFC42A /* ViewControllers */,
@@ -188,25 +188,25 @@
 				69E929D21F0B05FE00EFC42A /* Assault_Prevention.xcdatamodeld */,
 				692600A41F696ECC009B8400 /* GoogleService-Info.plist */,
 			);
-			path = "Assault Prevention";
+			path = BeBrave;
 			sourceTree = "<group>";
 		};
-		69E929E21F0B05FE00EFC42A /* Assault PreventionTests */ = {
+		69E929E21F0B05FE00EFC42A /* BeBraveTests */ = {
 			isa = PBXGroup;
 			children = (
 				69E929E31F0B05FE00EFC42A /* Assault_PreventionTests.swift */,
 				69E929E51F0B05FE00EFC42A /* Info.plist */,
 			);
-			path = "Assault PreventionTests";
+			path = BeBraveTests;
 			sourceTree = "<group>";
 		};
-		69E929ED1F0B05FE00EFC42A /* Assault PreventionUITests */ = {
+		69E929ED1F0B05FE00EFC42A /* BeBraveUITests */ = {
 			isa = PBXGroup;
 			children = (
 				69E929EE1F0B05FE00EFC42A /* Assault_PreventionUITests.swift */,
 				69E929F01F0B05FE00EFC42A /* Info.plist */,
 			);
-			path = "Assault PreventionUITests";
+			path = BeBraveUITests;
 			sourceTree = "<group>";
 		};
 		69E92A041F11298200EFC42A /* ViewControllers */ = {
@@ -228,9 +228,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		69E929C71F0B05FE00EFC42A /* Assault Prevention */ = {
+		69E929C71F0B05FE00EFC42A /* BeBrave */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 69E929F31F0B05FE00EFC42A /* Build configuration list for PBXNativeTarget "Assault Prevention" */;
+			buildConfigurationList = 69E929F31F0B05FE00EFC42A /* Build configuration list for PBXNativeTarget "BeBrave" */;
 			buildPhases = (
 				7786CB2E53048489F23CF2A2 /* [CP] Check Pods Manifest.lock */,
 				69E929C41F0B05FE00EFC42A /* Sources */,
@@ -243,9 +243,9 @@
 			);
 			dependencies = (
 			);
-			name = "Assault Prevention";
+			name = BeBrave;
 			productName = "Assault Prevention";
-			productReference = 69E929C81F0B05FE00EFC42A /* Assault Prevention.app */;
+			productReference = 69E929C81F0B05FE00EFC42A /* BeBrave.app */;
 			productType = "com.apple.product-type.application";
 		};
 		69E929DE1F0B05FE00EFC42A /* Assault PreventionTests */ = {
@@ -297,7 +297,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Alaeldin Tirba";
 				TargetAttributes = {
 					69E929C71F0B05FE00EFC42A = {
@@ -324,7 +324,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 69E929C31F0B05FE00EFC42A /* Build configuration list for PBXProject "Assault Prevention" */;
+			buildConfigurationList = 69E929C31F0B05FE00EFC42A /* Build configuration list for PBXProject "BeBrave" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -337,7 +337,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				69E929C71F0B05FE00EFC42A /* Assault Prevention */,
+				69E929C71F0B05FE00EFC42A /* BeBrave */,
 				69E929DE1F0B05FE00EFC42A /* Assault PreventionTests */,
 				69E929E91F0B05FE00EFC42A /* Assault PreventionUITests */,
 			);
@@ -591,12 +591,12 @@
 /* Begin PBXTargetDependency section */
 		69E929E11F0B05FE00EFC42A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 69E929C71F0B05FE00EFC42A /* Assault Prevention */;
+			target = 69E929C71F0B05FE00EFC42A /* BeBrave */;
 			targetProxy = 69E929E01F0B05FE00EFC42A /* PBXContainerItemProxy */;
 		};
 		69E929EC1F0B05FE00EFC42A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 69E929C71F0B05FE00EFC42A /* Assault Prevention */;
+			target = 69E929C71F0B05FE00EFC42A /* BeBrave */;
 			targetProxy = 69E929EB1F0B05FE00EFC42A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -635,6 +635,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -642,6 +643,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -691,6 +693,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -698,6 +701,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -731,12 +735,12 @@
 			baseConfigurationReference = F58A1827B6F28A05B0435CDA /* Pods-Assault Prevention.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Assault Prevention/Assault Prevention.entitlements";
+				CODE_SIGN_ENTITLEMENTS = BeBrave/BeBrave.entitlements;
 				DEVELOPMENT_TEAM = FGKH9597NF;
-				INFOPLIST_FILE = "Assault Prevention/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/BeBrave/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Alaeldin.BeBrave;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BeBrave;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -746,12 +750,12 @@
 			baseConfigurationReference = 9C0B792D631A25F22486E7A6 /* Pods-Assault Prevention.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Assault Prevention/Assault Prevention.entitlements";
+				CODE_SIGN_ENTITLEMENTS = BeBrave/BeBrave.entitlements;
 				DEVELOPMENT_TEAM = FGKH9597NF;
-				INFOPLIST_FILE = "Assault Prevention/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/BeBrave/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Alaeldin.BeBrave;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BeBrave;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -821,7 +825,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		69E929C31F0B05FE00EFC42A /* Build configuration list for PBXProject "Assault Prevention" */ = {
+		69E929C31F0B05FE00EFC42A /* Build configuration list for PBXProject "BeBrave" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				69E929F11F0B05FE00EFC42A /* Debug */,
@@ -830,7 +834,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		69E929F31F0B05FE00EFC42A /* Build configuration list for PBXNativeTarget "Assault Prevention" */ = {
+		69E929F31F0B05FE00EFC42A /* Build configuration list for PBXNativeTarget "BeBrave" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				69E929F41F0B05FE00EFC42A /* Debug */,
