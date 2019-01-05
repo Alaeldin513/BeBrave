@@ -64,12 +64,13 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
                 self.errorMessage.text = AuthErrorCode(rawValue: nsError.code)?.errorMessage
                 return
             }
-            user?.link(with: credential) { (user, error) in
-                if error != nil {
-                    print(error)
-                }
-                
-            }
+            
+//            user?.link(with: credential) { (user, error) in
+//                if error != nil {
+//                    print(error)
+//                }
+//
+//            }
            self.performSegue(withIdentifier: "appMainPage", sender: self)
         }
     }
