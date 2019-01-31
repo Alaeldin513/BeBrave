@@ -18,8 +18,8 @@
 		697D897E1F46892C0019D14D /* DesignableUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697D897D1F46892C0019D14D /* DesignableUIView.swift */; };
 		69A0CE2321E11C07001A92B7 /* BeBraveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A0CE2221E11C07001A92B7 /* BeBraveUITests.swift */; };
 		69A0CE3121E11C11001A92B7 /* BeBraveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A0CE3021E11C11001A92B7 /* BeBraveTests.swift */; };
-		69DA953D21E12180006D3889 /* Pods in Resources */ = {isa = PBXBuildFile; fileRef = 69DA953C21E12180006D3889 /* Pods */; };
 		69DA953E21E12245006D3889 /* Pods_BeBrave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BBB778605E4DC9DBAAE8306 /* Pods_BeBrave.framework */; };
+		69DA95422202A019006D3889 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DA95412202A019006D3889 /* UserModel.swift */; };
 		69E929CC1F0B05FE00EFC42A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E929CB1F0B05FE00EFC42A /* AppDelegate.swift */; };
 		69E929CE1F0B05FE00EFC42A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E929CD1F0B05FE00EFC42A /* LoginViewController.swift */; };
 		69E929D11F0B05FE00EFC42A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69E929CF1F0B05FE00EFC42A /* Main.storyboard */; };
@@ -72,7 +72,7 @@
 		69A0CE2E21E11C11001A92B7 /* BeBraveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeBraveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69A0CE3021E11C11001A92B7 /* BeBraveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeBraveTests.swift; sourceTree = "<group>"; };
 		69A0CE3221E11C11001A92B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		69DA953C21E12180006D3889 /* Pods */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Pods; sourceTree = "<group>"; };
+		69DA95412202A019006D3889 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		69E929C81F0B05FE00EFC42A /* BeBrave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeBrave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E929CB1F0B05FE00EFC42A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69E929CD1F0B05FE00EFC42A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +164,14 @@
 			path = BeBraveTests;
 			sourceTree = "<group>";
 		};
+		69DA95402202A000006D3889 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				69DA95412202A019006D3889 /* UserModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		69E929BF1F0B05FE00EFC42A = {
 			isa = PBXGroup;
 			children = (
@@ -173,7 +181,6 @@
 				69A0CE2121E11C07001A92B7 /* BeBraveUITests */,
 				69A0CE2F21E11C11001A92B7 /* BeBraveTests */,
 				69E929C91F0B05FE00EFC42A /* Products */,
-				69DA953C21E12180006D3889 /* Pods */,
 				1A5AD0B023AFA186640BB157 /* Pods */,
 				AA05E0EAA8903B083C3D58B0 /* Frameworks */,
 			);
@@ -192,6 +199,7 @@
 		69E929CA1F0B05FE00EFC42A /* BeBrave */ = {
 			isa = PBXGroup;
 			children = (
+				69DA95402202A000006D3889 /* Models */,
 				692578B01FD247CE0063BFC1 /* BeBrave.entitlements */,
 				69E929CB1F0B05FE00EFC42A /* AppDelegate.swift */,
 				697D89741F45DE4C0019D14D /* IBDesignable */,
@@ -335,6 +343,7 @@
 					69E929C71F0B05FE00EFC42A = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = FGKH9597NF;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -386,7 +395,6 @@
 				69E929D91F0B05FE00EFC42A /* LaunchScreen.storyboard in Resources */,
 				692600A51F696ECC009B8400 /* GoogleService-Info.plist in Resources */,
 				69E929D61F0B05FE00EFC42A /* Assets.xcassets in Resources */,
-				69DA953D21E12180006D3889 /* Pods in Resources */,
 				69E929D11F0B05FE00EFC42A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,6 +558,7 @@
 				69E929D41F0B05FE00EFC42A /* BeBrave.xcdatamodeld in Sources */,
 				697D897A1F45F01A0019D14D /* DesignableImage.swift in Sources */,
 				697D89781F45E9220019D14D /* FacebookLoginDelegate.swift in Sources */,
+				69DA95422202A019006D3889 /* UserModel.swift in Sources */,
 				69E92A061F1129D000EFC42A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -807,7 +816,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Alaeldin.BeBrave;
 				PRODUCT_NAME = BeBrave;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -822,7 +832,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Alaeldin.BeBrave;
 				PRODUCT_NAME = BeBrave;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
