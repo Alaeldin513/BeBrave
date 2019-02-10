@@ -16,7 +16,6 @@ class Constants: NSObject {
         var user = Auth.auth().currentUser
         var name: String
         var email: String
-        var password: String?
         var firstName: String?
         var lastName: String?
         var phoneNumber: String?
@@ -27,10 +26,9 @@ class Constants: NSObject {
         
     
         
-        init (name: String, password: String, email: String, phoneNumber: String ){
+        init (name: String, email: String, phoneNumber: String ){
             self.name = name
             self.email = email
-            self.password = password
             self.phoneNumber = phoneNumber
             return
         }

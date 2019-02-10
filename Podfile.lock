@@ -105,9 +105,9 @@ PODS:
   - nanopb/encode (0.3.901)
 
 DEPENDENCIES:
-  - FacebookCore (~> 0.2)
-  - FacebookLogin (~> 0.2)
-  - FacebookShare (~> 0.2)
+  - FacebookCore
+  - FacebookLogin
+  - FacebookShare
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -160,6 +160,6 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
 
-PODFILE CHECKSUM: 656d5eb40fbc08dcbd122b95396547949f5a1e2b
+PODFILE CHECKSUM: 71819949440a037505ef3125e5706ac9f38f24f8
 
 COCOAPODS: 1.5.3

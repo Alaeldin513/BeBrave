@@ -47,7 +47,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
     
     func customizeGoogleSignInButton(){
         googleLogin.colorScheme = .light
-        googleLogin.style = .wide
+        googleLogin.style = .iconOnly
     }
     
     @IBAction func firbaseEmailLogin(_ sender: UIButton) {
@@ -66,12 +66,12 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
                 return
             }            
            
-            user?.link(with: credential) { (user, error) in
-                if error != nil {
-                    print(error)
-                }
-
-            }
+//            user?.link(with: credential) { (user, error) in
+//                if error != nil {
+//                    print(error)
+//                }
+//
+//            }
            self.performSegue(withIdentifier: "appMainPage", sender: self)
         }
     }

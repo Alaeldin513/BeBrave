@@ -17,39 +17,18 @@ class SignUpViewcontroller: UIViewController, UITextFieldDelegate {
     
     var ref: DatabaseReference!
     
-    struct User {
-        var user = Auth.auth().currentUser
-        var email: String
-        var password: String
-        var name: String
-        var phoneNumber: String
-        
-        init (name: String, password: String, email: String, phoneNumber: String){
-            self.name = name
-            self.email = email
-            self.password = password
-            self.phoneNumber = phoneNumber
-        }
-    }
-    
     var email: String?
     var password: String?
     var confirmPassword: String?
     var name: String?
     var phoneNumber: String?
     
-    @IBOutlet weak var errorMessage: UILabel!
-    @IBAction func returnToSignIn(_ sender: UIButton) {
-        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "loginViewController") as! LoginViewController
-        
-        self.present(viewController, animated: true, completion: nil)
-    }
+   
+   
 
     @IBOutlet weak var submitButton: UIButton!
 
     override func viewDidLoad() {
-        submitButton.layer.borderWidth = 5
-        submitButton.layer.cornerRadius = 15
         ref = Database.database().reference()
     }
     
@@ -82,38 +61,44 @@ class SignUpViewcontroller: UIViewController, UITextFieldDelegate {
     @IBAction func signUpContinue(_ sender: Any) {
         
         guard let email = self.email, let password = self.password, let name = self.name else {
-            errorMessage.text = "Please fill all the fields"
+            //errorMessage.text = "Please fill all the fields"
             return
         }
         
         guard let phoneNumber = self.phoneNumber, self.phoneNumber?.count == 10 else {
-            errorMessage.text = "Please enter a valid phone number"
+            //errorMessage.text = "Please enter a valid phone number"
             return
         }
         
         guard confirmPassword == password else {
-            errorMessage.text = "Passwords don't match please try again"
+           // errorMessage.text = "Passwords don't match please try again"
             return
         }
         
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             
             if error == nil {
-                let newUser = User(name: name, password: password, email: email, phoneNumber: phoneNumber )
-                self.ref.child("users").child((user?.uid)!).setValue(["Name": newUser.name,
-                                                                      "phone": newUser.phoneNumber,
-                                                                      "Email": newUser.email])
+                let newUser = User(firstName: name, lastName: name, email: email, phoneNumber: phoneNumber )
+//                self.ref.child("users").child((user?.uid)!).setValue(["Name": newUser.name,
+//                                                                      "phone": newUser.phoneNumber,
+//                                                                      "Email": newUser.email])
                 Auth.auth().currentUser?.sendEmailVerification { (error) in}
                 self.performSegue(withIdentifier: "appMainPage", sender: self)
             } else {
                 let error = error as NSError?
                 let errorCode = AuthErrorCode(rawValue: error!.code)
-                self.errorMessage.text = errorCode!.errorMessage
+                //self.errorMessage.text = errorCode!.errorMessage
                     
             }
             
         }
        
+    }
+    
+    @IBAction func returnToSignIn(_ sender: UIButton) {
+        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "loginViewController") as! LoginViewController
+        
+        self.present(viewController, animated: true, completion: nil)
     }
     
 }
