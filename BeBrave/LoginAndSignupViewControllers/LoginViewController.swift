@@ -27,11 +27,8 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
     
     
     override func viewDidLoad() {
-        GIDSignIn.sharedInstance().uiDelegate = self
-        GIDSignIn.sharedInstance().delegate = self
-        facebookLoginButton.delegate = self
-        facebookLoginButton.readPermissions = ["email", "public_profile"]
-        customizeGoogleSignInButton()
+        setupFacebookSigninButton()
+        setupGoogleSigninButton()
     }
     
 
@@ -45,9 +42,20 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
         }
     }
     
-    func customizeGoogleSignInButton(){
+    func setupGoogleSigninButton(){
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().delegate = self
+        googleLogin.layer.cornerRadius = 37;
+        googleLogin.layer.masksToBounds = true;
         googleLogin.colorScheme = .light
-        googleLogin.style = .iconOnly
+        googleLogin.style = .wide
+    }
+    
+    func setupFacebookSigninButton(){
+        facebookLoginButton.layer.cornerRadius = 23;
+        facebookLoginButton.layer.masksToBounds = true;
+        facebookLoginButton.delegate = self
+        facebookLoginButton.readPermissions = ["email", "public_profile"]
     }
     
     @IBAction func firbaseEmailLogin(_ sender: UIButton) {

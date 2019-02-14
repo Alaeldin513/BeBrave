@@ -13,6 +13,7 @@ target 'BeBrave' do
     	pod 'FacebookCore' 
     	pod 'FacebookLogin' 
     	pod 'FacebookShare' 
+	pod 'MBProgressHUD', '~> 1.1.0'
 
   target 'BeBraveTests' do
     inherit! :search_paths

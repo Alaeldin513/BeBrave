@@ -9,14 +9,20 @@
 import Foundation
 import FirebaseAuth
 
+enum Result {
+    case success(AuthDataResult)
+    case failure(Error)
+}
 class FirbaseAuth {
     
-    func signUpUser(email: String, password: String) {
-        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+    static func signUpUser(email: String, password: String, completion: @escaping (Result) -> Void) {
+        Auth.auth().createUser(withEmail: email, password: password) { (authResult,error) in
             if error == nil {
-                Auth.auth().currentUser?.sendEmailVerification { (error) in}
+                Auth.auth().currentUser?.sendEmailVerification()
+                completion(.success(authResult!))
             } else {
-                
+                AuthErrorCode(rawValue: (error?._code)!)
+                completion(.failure(error!))
             }
             
         }
