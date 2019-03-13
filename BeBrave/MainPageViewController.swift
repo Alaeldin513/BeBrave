@@ -12,6 +12,13 @@ import GoogleSignIn
 
 class MainPageViewController: UIViewController {
 
+    @IBOutlet weak var displayName: UILabel!
+    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var height: UILabel!
+    @IBOutlet weak var weightLabel: UILabel!
+    @IBOutlet weak var eyeColorLabel: UILabel!
+    @IBOutlet weak var hairColorLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getCurrentUser()

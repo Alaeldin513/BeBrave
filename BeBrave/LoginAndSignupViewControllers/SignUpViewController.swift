@@ -24,10 +24,11 @@ class SignUpViewcontroller: UIViewController {
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var confirmPasswordLabel: UILabel!
     
+    var firstName: String?
+    var lastName: String?
     var email: String?
     var password: String?
     var confirmPassword: String?
-    var name: String?
     var phoneNumber: String?
     
 
@@ -37,9 +38,9 @@ class SignUpViewcontroller: UIViewController {
         ref = Database.database().reference()
     }
     
-    @IBAction func signUpContinue(_ sender: Any) {
+    @IBAction func signUp(_ sender: Any) {
         
-        guard let email = self.email, let password = self.password, let name = self.name else {
+        guard let email = self.email, let password = self.password, let firstName = self.firstName , let lastName = self.lastName else {
             self.showHud("Please fill all the fields")
             return
         }
@@ -57,14 +58,15 @@ class SignUpViewcontroller: UIViewController {
         FirbaseAuth.signUpUser(email: email, password: password) {(result) in
             switch result {
             case .success(let authresult):
-                self.performSegue(withIdentifier:"appMainPage" , sender: self)
+                authresult.user.displayName
+                authresult.user.email
+                self.performSegue(withIdentifier:"UserInformationSegue" , sender: self)
             case .failure(let error):
                 self.showErrorMessage(error: error)
             }
         }
-        
-       
     }
+    
     func showErrorMessage(error: Error) {
         switch AuthErrorCode(rawValue: (error._code))! {
         case .emailAlreadyInUse:
@@ -83,7 +85,14 @@ class SignUpViewcontroller: UIViewController {
         self.present(viewController, animated: true, completion: nil)
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "UserInformationSegue" {
+            var userInformationVC = segue.destination as! UserInformationFormViewController
+            userInformationVC.firstName = self.phoneNumber
+            userInformationVC.firstName = self.firstName
+            userInformationVC.lastName = self.lastName
+        }
+    }
     
 }
 
@@ -98,12 +107,14 @@ extension SignUpViewcontroller: UITextFieldDelegate {
         
         switch textField.tag{
         case 0:
-            self.name = textField.text
+            self.firstName = textField.text
         case 1:
-            self.phoneNumber = textField.text
+            self.lastName = textField.text
         case 2:
-            self.email = textField.text
+            self.phoneNumber = textField.text
         case 3:
+            self.email = textField.text
+        case 4:
             self.password = textField.text
         default:
             self.confirmPassword = textField.text

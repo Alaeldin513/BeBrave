@@ -8,16 +8,16 @@
 
 import Foundation
 
-struct User {
-    var firstName: String
-    var lastName: String
-    var email: String
-    var phoneNumber: String
-    
-    init (firstName: String, lastName: String, email: String, phoneNumber: String){
-        self.firstName = firstName
-        self.lastName = lastName
-        self.email = email
-        self.phoneNumber = phoneNumber
-    }
-}
+//extension User {
+//    var firstName: String
+//    var lastName: String
+//    var email: String
+//    var phoneNumber: String
+//    
+//    init (firstName: String, lastName: String, email: String, phoneNumber: String){
+//        self.firstName = firstName
+//        self.lastName = lastName
+//        self.email = email
+//        self.phoneNumber = phoneNumber
+//    }
+//}

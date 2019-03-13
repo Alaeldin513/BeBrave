@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BeBrave/LoginAndSignupViewControllers/LoginViewController.swift"
-            timestampString = "571817114.662913"
+            timestampString = "574144155.327437"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "firbaseEmailLogin(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BeBrave/LoginAndSignupViewControllers/SignUpViewController.swift"
-            timestampString = "571817114.6630321"
+            timestampString = "574144155.327577"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "textFieldShouldBeginEditing(_:)"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "signUp(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,29 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BeBrave/Controllers/FirebaseAuthController.swift"
-            timestampString = "571817114.663685"
+            filePath = "BeBrave/MainPageViewController.swift"
+            timestampString = "574144155.327687"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "signUpUser(email:password:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BeBrave/LoginAndSignupViewControllers/SignUpViewController.swift"
-            timestampString = "571817114.6642309"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "signUpContinue(_:)"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "getCurrentUser()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -11,6 +11,8 @@
 		6921B3451FEB72F9007F0BAF /* PinScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6921B3441FEB72F9007F0BAF /* PinScreenViewController.swift */; };
 		692F966D2213A5BA00188681 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 692F966C2213A5BA00188681 /* GoogleService-Info.plist */; };
 		692F966F2213AC2000188681 /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692F966E2213AC2000188681 /* StyleKit.swift */; };
+		697B65DA2238A831008D9F36 /* BeBrave.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 697B65D82238A831008D9F36 /* BeBrave.xcdatamodeld */; };
+		697B65DC2238A982008D9F36 /* UserInformationFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697B65DB2238A982008D9F36 /* UserInformationFormViewController.swift */; };
 		697D89731F4542420019D14D /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697D89721F4542420019D14D /* GoogleButton.swift */; };
 		697D89761F45DFD30019D14D /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697D89751F45DFD30019D14D /* DesignableButton.swift */; };
 		697D89781F45E9220019D14D /* FacebookLoginDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697D89771F45E9220019D14D /* FacebookLoginDelegate.swift */; };
@@ -62,6 +64,8 @@
 		692578B01FD247CE0063BFC1 /* BeBrave.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BeBrave.entitlements; sourceTree = "<group>"; };
 		692F966C2213A5BA00188681 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		692F966E2213AC2000188681 /* StyleKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleKit.swift; sourceTree = "<group>"; };
+		697B65D92238A831008D9F36 /* BeBrave.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeBrave.xcdatamodel; sourceTree = "<group>"; };
+		697B65DB2238A982008D9F36 /* UserInformationFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationFormViewController.swift; sourceTree = "<group>"; };
 		697D89721F4542420019D14D /* GoogleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
 		697D89751F45DFD30019D14D /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
 		697D89771F45E9220019D14D /* FacebookLoginDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginDelegate.swift; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 		69E929BF1F0B05FE00EFC42A = {
 			isa = PBXGroup;
 			children = (
+				697B65D82238A831008D9F36 /* BeBrave.xcdatamodeld */,
 				69E929CA1F0B05FE00EFC42A /* BeBrave */,
 				69E929ED1F0B05FE00EFC42A /* BeBraveUITests */,
 				69A0CE2F21E11C11001A92B7 /* BeBraveTests */,
@@ -247,6 +252,7 @@
 		69E92A041F11298200EFC42A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				697B65DB2238A982008D9F36 /* UserInformationFormViewController.swift */,
 				69E88B0E2210EE7D00E95855 /* Errors */,
 				69F1006C2210E9BA0052E2A8 /* LoginAndSignupViewControllers */,
 				697D89771F45E9220019D14D /* FacebookLoginDelegate.swift */,
@@ -577,6 +583,7 @@
 			files = (
 				697D897E1F46892C0019D14D /* DesignableUIView.swift in Sources */,
 				697D897C1F460F020019D14D /* GoogleLoginDelegate.swift in Sources */,
+				697B65DC2238A982008D9F36 /* UserInformationFormViewController.swift in Sources */,
 				69E92A031F1128C700EFC42A /* MainPageViewController.swift in Sources */,
 				692F966F2213AC2000188681 /* StyleKit.swift in Sources */,
 				69E929CC1F0B05FE00EFC42A /* AppDelegate.swift in Sources */,
@@ -590,6 +597,7 @@
 				697D89781F45E9220019D14D /* FacebookLoginDelegate.swift in Sources */,
 				69E88B0B2210EBBB00E95855 /* LoginViewController.swift in Sources */,
 				69DA95422202A019006D3889 /* User.swift in Sources */,
+				697B65DA2238A831008D9F36 /* BeBrave.xcdatamodeld in Sources */,
 				69F1006A2210E7DB0052E2A8 /* FirebaseAuthController.swift in Sources */,
 				69E92A061F1129D000EFC42A /* Constants.swift in Sources */,
 			);
@@ -909,6 +917,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		697B65D82238A831008D9F36 /* BeBrave.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				697B65D92238A831008D9F36 /* BeBrave.xcdatamodel */,
+			);
+			currentVersion = 697B65D92238A831008D9F36 /* BeBrave.xcdatamodel */;
+			path = BeBrave.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 69E929C01F0B05FE00EFC42A /* Project object */;
 }

@@ -20,6 +20,7 @@ class FirbaseAuth {
             if error == nil {
                 Auth.auth().currentUser?.sendEmailVerification()
                 completion(.success(authResult!))
+                
             } else {
                 AuthErrorCode(rawValue: (error?._code)!)
                 completion(.failure(error!))
