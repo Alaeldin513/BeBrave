@@ -8,30 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		6921B3431FDC6F40007F0BAF /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6921B3421FDC6F40007F0BAF /* ContactViewController.swift */; };
-		6921B3451FEB72F9007F0BAF /* PinScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6921B3441FEB72F9007F0BAF /* PinScreenViewController.swift */; };
 		692F966D2213A5BA00188681 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 692F966C2213A5BA00188681 /* GoogleService-Info.plist */; };
 		692F966F2213AC2000188681 /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692F966E2213AC2000188681 /* StyleKit.swift */; };
 		697B65DA2238A831008D9F36 /* BeBrave.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 697B65D82238A831008D9F36 /* BeBrave.xcdatamodeld */; };
 		697B65DC2238A982008D9F36 /* UserInformationFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697B65DB2238A982008D9F36 /* UserInformationFormViewController.swift */; };
 		697D89731F4542420019D14D /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697D89721F4542420019D14D /* GoogleButton.swift */; };
 		697D89761F45DFD30019D14D /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697D89751F45DFD30019D14D /* DesignableButton.swift */; };
-		697D89781F45E9220019D14D /* FacebookLoginDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697D89771F45E9220019D14D /* FacebookLoginDelegate.swift */; };
 		697D897A1F45F01A0019D14D /* DesignableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697D89791F45F01A0019D14D /* DesignableImage.swift */; };
-		697D897C1F460F020019D14D /* GoogleLoginDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697D897B1F460F020019D14D /* GoogleLoginDelegate.swift */; };
 		697D897E1F46892C0019D14D /* DesignableUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697D897D1F46892C0019D14D /* DesignableUIView.swift */; };
 		69A0CE3121E11C11001A92B7 /* BeBraveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A0CE3021E11C11001A92B7 /* BeBraveTests.swift */; };
+		69D4C97523F6133A00257099 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D4C97423F6133A00257099 /* StringExtension.swift */; };
 		69DA953E21E12245006D3889 /* Pods_BeBrave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BBB778605E4DC9DBAAE8306 /* Pods_BeBrave.framework */; };
 		69DA95422202A019006D3889 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DA95412202A019006D3889 /* User.swift */; };
-		69E88B0B2210EBBB00E95855 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E88B0A2210EBBB00E95855 /* LoginViewController.swift */; };
-		69E88B102210EEA700E95855 /* AppAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E88B0F2210EEA700E95855 /* AppAlerts.swift */; };
+		69E88B0B2210EBBB00E95855 /* AccountLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E88B0A2210EBBB00E95855 /* AccountLoginViewController.swift */; };
+		69E88B102210EEA700E95855 /* ViewContollerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E88B0F2210EEA700E95855 /* ViewContollerExtension.swift */; };
 		69E929CC1F0B05FE00EFC42A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E929CB1F0B05FE00EFC42A /* AppDelegate.swift */; };
 		69E929D11F0B05FE00EFC42A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69E929CF1F0B05FE00EFC42A /* Main.storyboard */; };
 		69E929D61F0B05FE00EFC42A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69E929D51F0B05FE00EFC42A /* Assets.xcassets */; };
 		69E929D91F0B05FE00EFC42A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69E929D71F0B05FE00EFC42A /* LaunchScreen.storyboard */; };
-		69E929FF1F0BE3D200EFC42A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E929FE1F0BE3D200EFC42A /* SignUpViewController.swift */; };
+		69E929FF1F0BE3D200EFC42A /* AccountSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E929FE1F0BE3D200EFC42A /* AccountSignUpViewController.swift */; };
 		69E92A031F1128C700EFC42A /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E92A021F1128C700EFC42A /* MainPageViewController.swift */; };
-		69E92A061F1129D000EFC42A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E92A051F1129D000EFC42A /* Constants.swift */; };
-		69F1006A2210E7DB0052E2A8 /* FirebaseAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F100692210E7DB0052E2A8 /* FirebaseAuthController.swift */; };
+		69F1006A2210E7DB0052E2A8 /* FirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F100692210E7DB0052E2A8 /* FirebaseController.swift */; };
 		98967827BEE06361A09151B2 /* Pods_BeBraveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD5E1B2DD40D60E3CA08D44 /* Pods_BeBraveTests.framework */; };
 		DF3B1956855F41810583071F /* Pods_BeBraveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 782A5B731AD253FCB5C4BABC /* Pods_BeBraveUITests.framework */; };
 /* End PBXBuildFile section */
@@ -60,7 +57,6 @@
 		4029630C996DEA4B9709219F /* Pods-BeBrave.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeBrave.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeBrave/Pods-BeBrave.debug.xcconfig"; sourceTree = "<group>"; };
 		6345FD8ADE6BE42F337ACFE7 /* Pods-BeBraveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeBraveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeBraveTests/Pods-BeBraveTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6921B3421FDC6F40007F0BAF /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
-		6921B3441FEB72F9007F0BAF /* PinScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinScreenViewController.swift; sourceTree = "<group>"; };
 		692578B01FD247CE0063BFC1 /* BeBrave.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BeBrave.entitlements; sourceTree = "<group>"; };
 		692F966C2213A5BA00188681 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		692F966E2213AC2000188681 /* StyleKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleKit.swift; sourceTree = "<group>"; };
@@ -68,17 +64,16 @@
 		697B65DB2238A982008D9F36 /* UserInformationFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationFormViewController.swift; sourceTree = "<group>"; };
 		697D89721F4542420019D14D /* GoogleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
 		697D89751F45DFD30019D14D /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
-		697D89771F45E9220019D14D /* FacebookLoginDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginDelegate.swift; sourceTree = "<group>"; };
 		697D89791F45F01A0019D14D /* DesignableImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableImage.swift; sourceTree = "<group>"; };
-		697D897B1F460F020019D14D /* GoogleLoginDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleLoginDelegate.swift; sourceTree = "<group>"; };
 		697D897D1F46892C0019D14D /* DesignableUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableUIView.swift; sourceTree = "<group>"; };
 		69A0CE2021E11C07001A92B7 /* BeBraveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeBraveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69A0CE2E21E11C11001A92B7 /* BeBraveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeBraveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69A0CE3021E11C11001A92B7 /* BeBraveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeBraveTests.swift; sourceTree = "<group>"; };
 		69A0CE3221E11C11001A92B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69D4C97423F6133A00257099 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		69DA95412202A019006D3889 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		69E88B0A2210EBBB00E95855 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		69E88B0F2210EEA700E95855 /* AppAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAlerts.swift; sourceTree = "<group>"; };
+		69E88B0A2210EBBB00E95855 /* AccountLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountLoginViewController.swift; sourceTree = "<group>"; };
+		69E88B0F2210EEA700E95855 /* ViewContollerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewContollerExtension.swift; sourceTree = "<group>"; };
 		69E929C81F0B05FE00EFC42A /* BeBrave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeBrave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E929CB1F0B05FE00EFC42A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69E929D01F0B05FE00EFC42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -87,10 +82,9 @@
 		69E929DA1F0B05FE00EFC42A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69E929EE1F0B05FE00EFC42A /* BeBraveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeBraveUITests.swift; sourceTree = "<group>"; };
 		69E929F01F0B05FE00EFC42A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		69E929FE1F0BE3D200EFC42A /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		69E929FE1F0BE3D200EFC42A /* AccountSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSignUpViewController.swift; sourceTree = "<group>"; };
 		69E92A021F1128C700EFC42A /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
-		69E92A051F1129D000EFC42A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		69F100692210E7DB0052E2A8 /* FirebaseAuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthController.swift; sourceTree = "<group>"; };
+		69F100692210E7DB0052E2A8 /* FirebaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseController.swift; sourceTree = "<group>"; };
 		782A5B731AD253FCB5C4BABC /* Pods_BeBraveUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeBraveUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		923F4B264127292E2F7A54D5 /* Pods-BeBraveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeBraveUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeBraveUITests/Pods-BeBraveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9BBB778605E4DC9DBAAE8306 /* Pods_BeBrave.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeBrave.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,6 +181,14 @@
 			path = BeBraveTests;
 			sourceTree = "<group>";
 		};
+		69D4C97623F634B800257099 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				69E88B0E2210EE7D00E95855 /* Extensions */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		69DA95402202A000006D3889 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,12 +197,13 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		69E88B0E2210EE7D00E95855 /* Errors */ = {
+		69E88B0E2210EE7D00E95855 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				69E88B0F2210EEA700E95855 /* AppAlerts.swift */,
+				69D4C97423F6133A00257099 /* StringExtension.swift */,
+				69E88B0F2210EEA700E95855 /* ViewContollerExtension.swift */,
 			);
-			name = Errors;
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		69E929BF1F0B05FE00EFC42A = {
@@ -231,11 +234,12 @@
 			children = (
 				69E929CB1F0B05FE00EFC42A /* AppDelegate.swift */,
 				69E929D51F0B05FE00EFC42A /* Assets.xcassets */,
-				692F96662213A1B700188681 /* Supporting Plist Files */,
 				692F96652213A18200188681 /* Storyboards */,
 				697D89741F45DE4C0019D14D /* IBDesignable */,
 				69E92A041F11298200EFC42A /* ViewControllers */,
 				692F966A2213A23C00188681 /* Web Services */,
+				69D4C97623F634B800257099 /* SupportingFiles */,
+				692F96662213A1B700188681 /* Supporting Plist Files */,
 			);
 			path = BeBrave;
 			sourceTree = "<group>";
@@ -252,15 +256,10 @@
 		69E92A041F11298200EFC42A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				697B65DB2238A982008D9F36 /* UserInformationFormViewController.swift */,
-				69E88B0E2210EE7D00E95855 /* Errors */,
-				69F1006C2210E9BA0052E2A8 /* LoginAndSignupViewControllers */,
-				697D89771F45E9220019D14D /* FacebookLoginDelegate.swift */,
-				697D897B1F460F020019D14D /* GoogleLoginDelegate.swift */,
+				69F1006C2210E9BA0052E2A8 /* Account */,
 				69E92A021F1128C700EFC42A /* MainPageViewController.swift */,
-				69E92A051F1129D000EFC42A /* Constants.swift */,
 				6921B3421FDC6F40007F0BAF /* ContactViewController.swift */,
-				6921B3441FEB72F9007F0BAF /* PinScreenViewController.swift */,
+				697B65DB2238A982008D9F36 /* UserInformationFormViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -268,18 +267,18 @@
 		69F1006B2210E85C0052E2A8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				69F100692210E7DB0052E2A8 /* FirebaseAuthController.swift */,
+				69F100692210E7DB0052E2A8 /* FirebaseController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		69F1006C2210E9BA0052E2A8 /* LoginAndSignupViewControllers */ = {
+		69F1006C2210E9BA0052E2A8 /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				69E929FE1F0BE3D200EFC42A /* SignUpViewController.swift */,
-				69E88B0A2210EBBB00E95855 /* LoginViewController.swift */,
+				69E929FE1F0BE3D200EFC42A /* AccountSignUpViewController.swift */,
+				69E88B0A2210EBBB00E95855 /* AccountLoginViewController.swift */,
 			);
-			path = LoginAndSignupViewControllers;
+			path = Account;
 			sourceTree = "<group>";
 		};
 		AA05E0EAA8903B083C3D58B0 /* Frameworks */ = {
@@ -483,7 +482,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BeBrave/Pods-BeBrave-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-BeBrave/Pods-BeBrave-resources.sh",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -492,7 +491,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeBrave/Pods-BeBrave-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeBrave/Pods-BeBrave-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E4C72BE2CD99A392092761C6 /* [CP] Check Pods Manifest.lock */ = {
@@ -523,7 +522,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BeBrave/Pods-BeBrave-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-BeBrave/Pods-BeBrave-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
@@ -556,7 +555,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeBrave/Pods-BeBrave-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeBrave/Pods-BeBrave-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -582,24 +581,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				697D897E1F46892C0019D14D /* DesignableUIView.swift in Sources */,
-				697D897C1F460F020019D14D /* GoogleLoginDelegate.swift in Sources */,
 				697B65DC2238A982008D9F36 /* UserInformationFormViewController.swift in Sources */,
 				69E92A031F1128C700EFC42A /* MainPageViewController.swift in Sources */,
 				692F966F2213AC2000188681 /* StyleKit.swift in Sources */,
 				69E929CC1F0B05FE00EFC42A /* AppDelegate.swift in Sources */,
 				6921B3431FDC6F40007F0BAF /* ContactViewController.swift in Sources */,
 				697D89761F45DFD30019D14D /* DesignableButton.swift in Sources */,
-				69E88B102210EEA700E95855 /* AppAlerts.swift in Sources */,
-				69E929FF1F0BE3D200EFC42A /* SignUpViewController.swift in Sources */,
-				6921B3451FEB72F9007F0BAF /* PinScreenViewController.swift in Sources */,
+				69E88B102210EEA700E95855 /* ViewContollerExtension.swift in Sources */,
+				69E929FF1F0BE3D200EFC42A /* AccountSignUpViewController.swift in Sources */,
 				697D89731F4542420019D14D /* GoogleButton.swift in Sources */,
 				697D897A1F45F01A0019D14D /* DesignableImage.swift in Sources */,
-				697D89781F45E9220019D14D /* FacebookLoginDelegate.swift in Sources */,
-				69E88B0B2210EBBB00E95855 /* LoginViewController.swift in Sources */,
+				69D4C97523F6133A00257099 /* StringExtension.swift in Sources */,
+				69E88B0B2210EBBB00E95855 /* AccountLoginViewController.swift in Sources */,
 				69DA95422202A019006D3889 /* User.swift in Sources */,
 				697B65DA2238A831008D9F36 /* BeBrave.xcdatamodeld in Sources */,
-				69F1006A2210E7DB0052E2A8 /* FirebaseAuthController.swift in Sources */,
-				69E92A061F1129D000EFC42A /* Constants.swift in Sources */,
+				69F1006A2210E7DB0052E2A8 /* FirebaseController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

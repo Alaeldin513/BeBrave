@@ -113,7 +113,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="firbaseEmailLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZVC-Ui-gbF"/>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="ND2-5n-JH9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -397,7 +397,7 @@
                                 </constraints>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="be-2258264_960_720" highlightedImage="be-2258264_960_720" translatesAutoresizingMaskIntoConstraints="NO" id="bji-xg-Sv3" userLabel="Logo Image">
-                                <rect key="frame" x="106.33333333333333" y="52" width="201.33333333333337" height="150"/>
+                                <rect key="frame" x="106.33333333333331" y="52" width="201.33333333333337" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="NSh-52-gw9"/>
                                     <constraint firstAttribute="width" secondItem="bji-xg-Sv3" secondAttribute="height" multiplier="240:179" id="Q6n-Z2-ZyR"/>
@@ -428,12 +428,12 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
-                        <outlet property="confirmPasswordLabel" destination="KoC-jJ-vzL" id="6s3-FZ-JAJ"/>
-                        <outlet property="emailLabel" destination="jtf-AK-iks" id="GkN-Ra-5i6"/>
-                        <outlet property="firstNameLabel" destination="EqD-Z7-8z2" id="1iS-MT-wCM"/>
-                        <outlet property="lastNameLabel" destination="cfj-VN-7nH" id="XDr-ow-7x1"/>
-                        <outlet property="passwordLabel" destination="8Mh-Kr-q4E" id="Id9-bo-Vq9"/>
-                        <outlet property="phoneNumberLabel" destination="Ikb-0G-Xwj" id="F5d-mi-bHx"/>
+                        <outlet property="confirmPasswordTextField" destination="b4C-rF-7oL" id="k6a-75-63a"/>
+                        <outlet property="emailTextField" destination="7ax-af-4fI" id="tuU-WW-8ov"/>
+                        <outlet property="firstNameTextField" destination="PPy-FE-hAp" id="ggd-dl-CSX"/>
+                        <outlet property="lastNameTextField" destination="tpL-PA-cLU" id="NT5-q5-TH4"/>
+                        <outlet property="passwordTextField" destination="YyL-P7-eNx" id="5tg-bs-DFO"/>
+                        <outlet property="phoneNumberTextField" destination="8QL-FY-kUU" id="JXJ-iV-129"/>
                         <outlet property="submitButton" destination="j70-cL-iLI" id="dWr-az-xg6"/>
                         <segue destination="J4S-9l-r2T" kind="showDetail" identifier="appMainPage" id="x00-7F-ePd"/>
                         <segue destination="Mgd-Qs-a9L" kind="show" identifier="UserInformationSegue" id="M5B-yS-yZ8"/>
@@ -516,28 +516,28 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Grace Imhoff" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Waf-yV-sB4">
-                                                    <rect key="frame" x="78" y="5" width="193" height="20.666666666666668"/>
+                                                    <rect key="frame" x="78" y="5" width="379" height="20.666666666666668"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Friend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDb-AF-tOt">
-                                                    <rect key="frame" x="340.33333333333331" y="8" width="35.666666666666686" height="14.333333333333336"/>
+                                                    <rect key="frame" x="526.33333333333337" y="8" width="35.666666666666629" height="14.333333333333336"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.71450666240000005" green="0.71450666240000005" blue="0.71450666240000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="J66-TZ-6ag">
-                                                    <rect key="frame" x="78" y="30" width="290" height="24"/>
+                                                    <rect key="frame" x="78" y="30" width="476" height="24"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="513-555-6262" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPb-BA-5Fe">
-                                                            <rect key="frame" x="0.0" y="0.0" width="290" height="12"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="476" height="12"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="gi5697a@student.american.edu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VT-XM-e5D">
-                                                            <rect key="frame" x="0.0" y="12" width="290" height="12"/>
+                                                            <rect key="frame" x="0.0" y="12" width="476" height="12"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -827,336 +827,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dk5-Ye-jVB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1403" y="1727"/>
-        </scene>
-        <!--Pin Screen View Controller-->
-        <scene sceneID="MIv-eG-ys6">
-            <objects>
-                <viewController id="xbl-05-WUs" customClass="PinScreenViewController" customModule="BeBrave" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ObH-Xp-pR3"/>
-                        <viewControllerLayoutGuide type="bottom" id="03d-7G-j4f"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="dDi-XD-DvF" customClass="DesignableUIView" customModule="BeBrave" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="Udq-av-fw9">
-                                <rect key="frame" x="86" y="135" width="243" height="170"/>
-                                <subviews>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNH-g8-bH8">
-                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="10000"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label hidden="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBN-M8-7Ga">
-                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="10000"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7oG-gJ-015">
-                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="10000"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tro-UY-vCg">
-                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="10000"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="mRH-vf-g5b">
-                                <rect key="frame" x="45" y="359.66666666666669" width="324" height="177.00000000000006"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="swZ-Tq-Uth">
-                                        <rect key="frame" x="0.0" y="0.0" width="324" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQV-Ce-FJh" customClass="DesignableButton" customModule="BeBrave" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="94" height="30"/>
-                                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
-                                                <state key="normal" title="1">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <color key="titleShadowColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="2"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="buttonPressed:" destination="xbl-05-WUs" eventType="touchUpInside" id="DMf-fP-AxS"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tiY-E4-fFh" customClass="DesignableButton" customModule="BeBrave" customModuleProvider="target">
-                                                <rect key="frame" x="115" y="0.0" width="94" height="30"/>
-                                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
-                                                <state key="normal" title="2">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="2"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="buttonPressed:" destination="xbl-05-WUs" eventType="touchUpInside" id="Cmd-8w-I43"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riX-AR-bfe" customClass="DesignableButton" customModule="BeBrave" customModuleProvider="target">
-                                                <rect key="frame" x="230" y="0.0" width="94" height="30"/>
-                                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
-                                                <state key="normal" title="3">
-                                                    <color key="titleColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="2"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="buttonPressed:" destination="xbl-05-WUs" eventType="touchUpInside" id="T7X-G8-hMa"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="38L-Wd-cZN">
-                                        <rect key="frame" x="0.0" y="49" width="324" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0br-09-A4e" customClass="DesignableButton" customModule="BeBrave" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="94" height="30"/>
-                                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
-                                                <state key="normal" title="4">
-                                                    <color key="titleColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="2"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="buttonPressed:" destination="xbl-05-WUs" eventType="touchUpInside" id="4dj-Zu-N7w"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WoY-oG-oO1" customClass="DesignableButton" customModule="BeBrave" customModuleProvider="target">
-                                                <rect key="frame" x="115" y="0.0" width="94" height="30"/>
-                                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
-                                                <state key="normal" title="5">
-                                                    <color key="titleColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="2"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="buttonPressed:" destination="xbl-05-WUs" eventType="touchUpInside" id="S3s-ow-d7O"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRL-Vp-S5n" customClass="DesignableButton" customModule="BeBrave" customModuleProvider="target">
-                                                <rect key="frame" x="230" y="0.0" width="94" height="30"/>
-                                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
-                                                <state key="normal" title="6">
-                                                    <color key="titleColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="2"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="buttonPressed:" destination="xbl-05-WUs" eventType="touchUpInside" id="P54-Ve-5Ce"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="RTT-Kr-5Qp">
-                                        <rect key="frame" x="0.0" y="98" width="324" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4N-XU-ffk" customClass="DesignableButton" customModule="BeBrave" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="94" height="30"/>
-                                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
-                                                <state key="normal" title="7">
-                                                    <color key="titleColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="2"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="buttonPressed:" destination="xbl-05-WUs" eventType="touchUpInside" id="FwM-y6-qen"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJK-6k-SZM" customClass="DesignableButton" customModule="BeBrave" customModuleProvider="target">
-                                                <rect key="frame" x="115" y="0.0" width="94" height="30"/>
-                                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
-                                                <state key="normal" title="8">
-                                                    <color key="titleColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="2"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="buttonPressed:" destination="xbl-05-WUs" eventType="touchUpInside" id="QMH-Q8-rZB"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7YK-TJ-Jol" customClass="DesignableButton" customModule="BeBrave" customModuleProvider="target">
-                                                <rect key="frame" x="230" y="0.0" width="94" height="30"/>
-                                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
-                                                <state key="normal" title="9">
-                                                    <color key="titleColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="2"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="buttonPressed:" destination="xbl-05-WUs" eventType="touchUpInside" id="DmA-uS-Qu2"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="r9L-lv-OHV">
-                                        <rect key="frame" x="0.0" y="147" width="324" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SUr-u1-p5a" customClass="DesignableButton" customModule="BeBrave" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="324" height="30"/>
-                                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
-                                                <state key="normal" title="0">
-                                                    <color key="titleColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="2"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="buttonPressed:" destination="xbl-05-WUs" eventType="touchUpInside" id="96L-lO-hdn"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="mRH-vf-g5b" firstAttribute="centerY" secondItem="dDi-XD-DvF" secondAttribute="centerY" id="5Hf-h3-a9n"/>
-                            <constraint firstItem="mRH-vf-g5b" firstAttribute="top" secondItem="Udq-av-fw9" secondAttribute="bottom" constant="54.5" id="CDm-OI-44Y"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Udq-av-fw9" secondAttribute="trailing" constant="65" id="Qrg-ku-Fnt"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="mRH-vf-g5b" secondAttribute="trailing" constant="25" id="Uh7-kN-dkm"/>
-                            <constraint firstItem="Udq-av-fw9" firstAttribute="top" secondItem="ObH-Xp-pR3" secondAttribute="bottom" constant="91" id="VPd-t7-vCU"/>
-                            <constraint firstItem="mRH-vf-g5b" firstAttribute="centerX" secondItem="dDi-XD-DvF" secondAttribute="centerX" id="gaO-nF-vrM"/>
-                            <constraint firstItem="Udq-av-fw9" firstAttribute="leading" secondItem="dDi-XD-DvF" secondAttribute="leadingMargin" constant="66" id="lz1-Y6-LKI"/>
-                            <constraint firstItem="mRH-vf-g5b" firstAttribute="leading" secondItem="dDi-XD-DvF" secondAttribute="leadingMargin" constant="25" id="mw2-ZL-mSC"/>
-                        </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                <color key="value" red="0.23752292990000001" green="0.5712958574" blue="0.57652294640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </view>
-                    <connections>
-                        <outlet property="eightButton" destination="UJK-6k-SZM" id="XZ1-pw-YWd"/>
-                        <outlet property="fiveButon" destination="WoY-oG-oO1" id="YAp-C1-ErF"/>
-                        <outlet property="fourButton" destination="0br-09-A4e" id="KxF-WX-n3b"/>
-                        <outlet property="nineButton" destination="7YK-TJ-Jol" id="XTP-oz-chq"/>
-                        <outlet property="oneButton" destination="eQV-Ce-FJh" id="Xjh-z0-DeT"/>
-                        <outlet property="pinPostionFour" destination="Tro-UY-vCg" id="sri-Mz-a2q"/>
-                        <outlet property="pinPostionOne" destination="RNH-g8-bH8" id="zws-dA-VFy"/>
-                        <outlet property="pinPostionThree" destination="7oG-gJ-015" id="6fL-xM-fqL"/>
-                        <outlet property="pinPostionTwo" destination="IBN-M8-7Ga" id="Hnq-9Z-Gif"/>
-                        <outlet property="sevenButton" destination="h4N-XU-ffk" id="0kV-fg-25C"/>
-                        <outlet property="sixButton" destination="wRL-Vp-S5n" id="sWf-gK-YFF"/>
-                        <outlet property="threeButton" destination="riX-AR-bfe" id="iBF-MU-Kf5"/>
-                        <outlet property="twoButton" destination="tiY-E4-fFh" id="I3i-fM-mxN"/>
-                        <outlet property="zeroButton" destination="SUr-u1-p5a" id="22t-lX-t8Z"/>
-                        <segue destination="Mgd-Qs-a9L" kind="show" identifier="userInfoSegue" id="DWK-FN-v7u"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nvu-y0-iyw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-457" y="-812"/>
         </scene>
         <!--User Information Form View Controller-->
         <scene sceneID="HNG-TV-TWC">
@@ -1569,9 +1239,6 @@
                                         <real key="value" value="14"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="firbaseEmailLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J2m-8W-yh7"/>
-                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gA7-md-dbt">
                                 <rect key="frame" x="70" y="108.00000000000001" width="274" height="160.33333333333337"/>
@@ -1682,9 +1349,6 @@
                                         <real key="value" value="14"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="firbaseEmailLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dU3-HX-8eO"/>
-                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="rij-jH-dDQ">
                                 <rect key="frame" x="111.66666666666667" y="267" width="190.66666666666663" height="152"/>
@@ -1794,7 +1458,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k1T-zA-hZX">
-                                <rect key="frame" x="89.999999999999986" y="64.000000000000014" width="138.66666666666666" height="160.33333333333337"/>
+                                <rect key="frame" x="90" y="64.000000000000014" width="138.66666666666666" height="160.33333333333337"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="14590114_1414011091947170_4845765494153646500_o" translatesAutoresizingMaskIntoConstraints="NO" id="JaN-mO-Jq3" customClass="DesignableImage" customModule="BeBrave" customModuleProvider="target">
                                         <rect key="frame" x="5" y="0.0" width="129" height="130"/>
@@ -1989,9 +1653,6 @@
                                     <real key="value" value="14"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
-                            <connections>
-                                <action selector="firbaseEmailLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rI5-ev-wLE"/>
-                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -2028,7 +1689,6 @@
         <image name="notification (1)" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="M5B-yS-yZ8"/>
         <segue reference="x00-7F-ePd"/>
     </inferredMetricsTieBreakers>
 </document>
