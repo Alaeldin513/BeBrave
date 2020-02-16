@@ -12,7 +12,7 @@ import MBProgressHUD
 
 extension UIViewController {
     
-    func showHud(_ message: String) {
+    func showErrorHud(_ message: String) {
         DispatchQueue.main.async {
             let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
             hud.mode = .text
@@ -24,11 +24,6 @@ extension UIViewController {
             hud.isUserInteractionEnabled = false
             hud.hide(animated: true, afterDelay: 5)
         }
-    }
-    
-    
-    func hideHUD() {
-        
     }
     
 }
