@@ -13,6 +13,7 @@ enum Result {
     case success(AuthDataResult)
     case failure(Error)
 }
+
 class FirbaseAuth {
     
     static func signUpUser(email: String, password: String, completion: @escaping (Result) -> Void) {

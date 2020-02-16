@@ -31,17 +31,22 @@ class SignUpViewcontroller: UIViewController {
     
     @IBAction func signUp(_ sender: Any) {
         if validateTextFields() {
-            FirbaseAuth.signUpUser(email: emailTextField.text!, password: passwordTextField.text!) {(result) in
+            FirebaseAccountManager.signUpUserWith(email: emailTextField.text!, password: passwordTextField.text!){ [weak self] (result) in
                 switch result {
-                case .success(let authresult):
-                    self.performSegue(withIdentifier:"UserInformationSegue" , sender: self)
+                case .success(let user):
+                    self?.performSegue(withIdentifier:"UserInformationSegue" , sender: self)
                 case .failure(let error):
-                    self.showErrorMessage(error: error)
+                    self?.showErrorHud(FirebaseAccountManager.getStringDescriptionFor(error: error as NSError))
                 }
             }
         }
-        return
     }
+    
+    @IBAction func returnToSignIn(_ sender: UIButton) {
+        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "loginViewController") as! LoginViewController
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
     func validateTextFields() -> Bool {
         guard self.emailTextField.text != nil,
             let password = self.passwordTextField.text,
@@ -64,22 +69,6 @@ class SignUpViewcontroller: UIViewController {
                 return false
         }
         return true
-    }
-    func showErrorMessage(error: Error) {
-        switch AuthErrorCode(rawValue: (error._code))! {
-        case .emailAlreadyInUse:
-            self.showErrorHud(String.emailInUseErrorMessage)
-        case .invalidEmail:
-            self.showErrorHud(String.invalidEmailErrorMessage)
-        default:
-            self.showErrorHud(String.genericErrorMessage)
-        }
-    }
-    
-    @IBAction func returnToSignIn(_ sender: UIButton) {
-        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "loginViewController") as! LoginViewController
-        
-        self.present(viewController, animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
