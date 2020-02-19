@@ -9,7 +9,7 @@
 import Foundation
 import Firebase
 
-extension User {
+extension BeBraveUser {
     convenience init (fullName: String, email: String, phoneNumber: String ){
         self.init()
         self.fullName = fullName
@@ -25,6 +25,7 @@ extension User {
     }
     
     convenience init(firstName: String, lastName: String, email: String, phoneNumber: String) {
+        self.init()
         self.firstName = firstName
         self.lastName = lastName
         self.email = email

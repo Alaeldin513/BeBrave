@@ -10,10 +10,12 @@
 		04E48B3F082FD95F92874C35 /* Pods_BeBraveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6159B324D940C4A7BDDBDEB /* Pods_BeBraveUITests.framework */; };
 		1D53B30CFD0566DB92C43FE6 /* Pods_BeBrave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA8944122E846502E044495 /* Pods_BeBrave.framework */; };
 		6921B3431FDC6F40007F0BAF /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6921B3421FDC6F40007F0BAF /* ContactViewController.swift */; };
+		692302A923FCE8AB00BEA9B2 /* BeBraveUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692302A823FCE8AB00BEA9B2 /* BeBraveUser+CoreDataProperties.swift */; };
+		692302AF23FCE9E200BEA9B2 /* BeBraveUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692302AE23FCE9E200BEA9B2 /* BeBraveUser+CoreDataClass.swift */; };
+		692302B423FCEA9E00BEA9B2 /* BeBrave.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 692302B223FCEA9E00BEA9B2 /* BeBrave.xcdatamodeld */; };
 		692F966D2213A5BA00188681 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 692F966C2213A5BA00188681 /* GoogleService-Info.plist */; };
 		692F966F2213AC2000188681 /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692F966E2213AC2000188681 /* StyleKit.swift */; };
 		69545F8423FB934600115100 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69545F8323FB934600115100 /* AccountManager.swift */; };
-		697B65DA2238A831008D9F36 /* BeBrave.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 697B65D82238A831008D9F36 /* BeBrave.xcdatamodeld */; };
 		697B65DC2238A982008D9F36 /* UserInformationFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697B65DB2238A982008D9F36 /* UserInformationFormViewController.swift */; };
 		697D89731F4542420019D14D /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697D89721F4542420019D14D /* GoogleButton.swift */; };
 		697D89761F45DFD30019D14D /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697D89751F45DFD30019D14D /* DesignableButton.swift */; };
@@ -21,7 +23,7 @@
 		697D897E1F46892C0019D14D /* DesignableUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697D897D1F46892C0019D14D /* DesignableUIView.swift */; };
 		69A0CE3121E11C11001A92B7 /* BeBraveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A0CE3021E11C11001A92B7 /* BeBraveTests.swift */; };
 		69D4C97523F6133A00257099 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D4C97423F6133A00257099 /* StringExtension.swift */; };
-		69DA95422202A019006D3889 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DA95412202A019006D3889 /* User.swift */; };
+		69DA95422202A019006D3889 /* BeBraveUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DA95412202A019006D3889 /* BeBraveUser.swift */; };
 		69E88B0B2210EBBB00E95855 /* AccountLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E88B0A2210EBBB00E95855 /* AccountLoginViewController.swift */; };
 		69E88B102210EEA700E95855 /* ViewContollerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E88B0F2210EEA700E95855 /* ViewContollerExtension.swift */; };
 		69E929CC1F0B05FE00EFC42A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E929CB1F0B05FE00EFC42A /* AppDelegate.swift */; };
@@ -56,6 +58,9 @@
 		4DA8944122E846502E044495 /* Pods_BeBrave.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeBrave.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64971DD46E8751BA451FC2B9 /* Pods-BeBrave.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeBrave.release.xcconfig"; path = "Target Support Files/Pods-BeBrave/Pods-BeBrave.release.xcconfig"; sourceTree = "<group>"; };
 		6921B3421FDC6F40007F0BAF /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		692302A823FCE8AB00BEA9B2 /* BeBraveUser+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "BeBraveUser+CoreDataProperties.swift"; path = "BeBrave/BeBraveUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		692302AE23FCE9E200BEA9B2 /* BeBraveUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "BeBraveUser+CoreDataClass.swift"; path = "/Users/alaeldintirba/Development/IOS/BeBrave/BeBraveUser+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		692302B323FCEA9E00BEA9B2 /* Assault_Prevention.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Assault_Prevention.xcdatamodel; sourceTree = "<group>"; };
 		692578B01FD247CE0063BFC1 /* BeBrave.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BeBrave.entitlements; sourceTree = "<group>"; };
 		692F966C2213A5BA00188681 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		692F966E2213AC2000188681 /* StyleKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleKit.swift; sourceTree = "<group>"; };
@@ -63,7 +68,6 @@
 		69545F7D23FB77A000115100 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69545F7F23FB781C00115100 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		69545F8323FB934600115100 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
-		697B65D92238A831008D9F36 /* BeBrave.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeBrave.xcdatamodel; sourceTree = "<group>"; };
 		697B65DB2238A982008D9F36 /* UserInformationFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationFormViewController.swift; sourceTree = "<group>"; };
 		697D89721F4542420019D14D /* GoogleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
 		697D89751F45DFD30019D14D /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
@@ -74,7 +78,7 @@
 		69A0CE3021E11C11001A92B7 /* BeBraveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeBraveTests.swift; sourceTree = "<group>"; };
 		69A0CE3221E11C11001A92B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69D4C97423F6133A00257099 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		69DA95412202A019006D3889 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		69DA95412202A019006D3889 /* BeBraveUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeBraveUser.swift; sourceTree = "<group>"; };
 		69E88B0A2210EBBB00E95855 /* AccountLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountLoginViewController.swift; sourceTree = "<group>"; };
 		69E88B0F2210EEA700E95855 /* ViewContollerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewContollerExtension.swift; sourceTree = "<group>"; };
 		69E929C81F0B05FE00EFC42A /* BeBrave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeBrave.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -210,7 +214,7 @@
 		69DA95402202A000006D3889 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				69DA95412202A019006D3889 /* User.swift */,
+				69DA95412202A019006D3889 /* BeBraveUser.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -227,7 +231,9 @@
 		69E929BF1F0B05FE00EFC42A = {
 			isa = PBXGroup;
 			children = (
-				697B65D82238A831008D9F36 /* BeBrave.xcdatamodeld */,
+				692302B223FCEA9E00BEA9B2 /* BeBrave.xcdatamodeld */,
+				692302AE23FCE9E200BEA9B2 /* BeBraveUser+CoreDataClass.swift */,
+				692302A823FCE8AB00BEA9B2 /* BeBraveUser+CoreDataProperties.swift */,
 				69E929CA1F0B05FE00EFC42A /* BeBrave */,
 				69E929ED1F0B05FE00EFC42A /* BeBraveUITests */,
 				69A0CE2F21E11C11001A92B7 /* BeBraveTests */,
@@ -604,6 +610,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				692302B423FCEA9E00BEA9B2 /* BeBrave.xcdatamodeld in Sources */,
 				697D897E1F46892C0019D14D /* DesignableUIView.swift in Sources */,
 				697B65DC2238A982008D9F36 /* UserInformationFormViewController.swift in Sources */,
 				69E92A031F1128C700EFC42A /* MainPageViewController.swift in Sources */,
@@ -614,12 +621,13 @@
 				69E88B102210EEA700E95855 /* ViewContollerExtension.swift in Sources */,
 				69E929FF1F0BE3D200EFC42A /* AccountSignUpViewController.swift in Sources */,
 				697D89731F4542420019D14D /* GoogleButton.swift in Sources */,
+				692302A923FCE8AB00BEA9B2 /* BeBraveUser+CoreDataProperties.swift in Sources */,
 				697D897A1F45F01A0019D14D /* DesignableImage.swift in Sources */,
 				69D4C97523F6133A00257099 /* StringExtension.swift in Sources */,
 				69E88B0B2210EBBB00E95855 /* AccountLoginViewController.swift in Sources */,
-				69DA95422202A019006D3889 /* User.swift in Sources */,
+				69DA95422202A019006D3889 /* BeBraveUser.swift in Sources */,
 				69545F8423FB934600115100 /* AccountManager.swift in Sources */,
-				697B65DA2238A831008D9F36 /* BeBrave.xcdatamodeld in Sources */,
+				692302AF23FCE9E200BEA9B2 /* BeBraveUser+CoreDataClass.swift in Sources */,
 				69F1006A2210E7DB0052E2A8 /* FirebaseController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -940,13 +948,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		697B65D82238A831008D9F36 /* BeBrave.xcdatamodeld */ = {
+		692302B223FCEA9E00BEA9B2 /* BeBrave.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				697B65D92238A831008D9F36 /* BeBrave.xcdatamodel */,
+				692302B323FCEA9E00BEA9B2 /* Assault_Prevention.xcdatamodel */,
 			);
-			currentVersion = 697B65D92238A831008D9F36 /* BeBrave.xcdatamodel */;
-			path = BeBrave.xcdatamodeld;
+			currentVersion = 692302B323FCEA9E00BEA9B2 /* Assault_Prevention.xcdatamodel */;
+			name = BeBrave.xcdatamodeld;
+			path = BeBrave/BeBrave.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -11,7 +11,7 @@ import Foundation
 class AccountManager {
     
     static let shared = AccountManager()
-    var currentUser: User? = nil
+    var currentUser: BeBraveUser? = nil
 
     // Initialization
 

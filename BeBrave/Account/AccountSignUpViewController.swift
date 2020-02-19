@@ -15,8 +15,6 @@ import FirebaseAuth
 
 
 class SignUpViewcontroller: UIViewController {
-    var sdk: FirebaseAuth.User
-    var ref: DatabaseReference!
     
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
@@ -25,6 +23,8 @@ class SignUpViewcontroller: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var submitButton: UIButton!
+    
+    var ref: DatabaseReference!
 
     override func viewDidLoad() {
         ref = Database.database().reference()
@@ -35,7 +35,7 @@ class SignUpViewcontroller: UIViewController {
             FirebaseAccountManager.signUpUserWith(email: emailTextField.text!, password: passwordTextField.text!){ [weak self] (result) in
                 switch result {
                 case .success(let firebaseUser):
-                    AccountManager.shared.currentUser.firebaseAccount = firebaseUser
+                    AccountManager.shared.currentUser?.firebaseAccount = firebaseUser
                     self?.performSegue(withIdentifier:"UserInformationSegue" , sender: self)
                 case .failure(let error):
                     self?.showErrorHud(FirebaseAccountManager.getStringDescriptionFor(error: error as NSError))
@@ -70,7 +70,7 @@ class SignUpViewcontroller: UIViewController {
                 self.showErrorHud(String.passwordDontMatchErrorMessage)
                 return false
         }
-        AccountManager.shared.currentUser = User(firstName: firstName, lastName: lastName, email: email, phoneNumber: phoneNumber)
+        AccountManager.shared.currentUser = BeBraveUser(firstName: firstName, lastName: lastName, email: email, phoneNumber: phoneNumber)
         return true
     }
     
