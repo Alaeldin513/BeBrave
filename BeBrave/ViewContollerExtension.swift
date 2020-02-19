@@ -22,7 +22,7 @@ extension UIViewController {
             hud.detailsLabel.textColor = .white
             hud.label.textColor = UIColor(red: 150 , green: 47, blue: 46, alpha: 1)
             hud.isUserInteractionEnabled = false
-            hud.hide(animated: true, afterDelay: 5)
+            hud.hide(animated: true, afterDelay: 3)
         }
     }
     
