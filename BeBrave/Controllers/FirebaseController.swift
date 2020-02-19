@@ -21,6 +21,7 @@ class FirebaseAccountManager {
         Auth.auth().createUser(withEmail: email, password: password) { (authResult,authError) in
             guard authError == nil else {
                 completion(.failure(authError!))
+                return
             }
             if let result = authResult {
                 completion(.success(result.user))
@@ -35,6 +36,7 @@ class FirebaseAccountManager {
         Auth.auth().signIn(withEmail: email, password: password) { (authResult, authError) in
             guard authError == nil else {
                 completion(.failure(authError!))
+                return
             }
             if let result = authResult {
                 completion(.success(result.user))
@@ -48,6 +50,7 @@ class FirebaseAccountManager {
         Auth.auth().signInAndRetrieveData(with: credential) { (authResult,authError) in
             guard authError == nil else {
                 completion(.failure(authError!))
+                return
             }
             
             if let result = authResult {
@@ -100,31 +103,4 @@ class FirebaseAccountManager {
         return errorString + " Please try again."
     }
 }
-
-/*
-FIRAuthErrorCodeInvalidCredential` - Indicates the supplied credential is invalid.
-This could happen if it has expired or it is malformed.
-+ `FIRAuthErrorCodeOperationNotAllowed` - Indicates that accounts
-with the identity provider represented by the credential are not enabled.
-Enable them in the Auth section of the Firebase console.
-+ `FIRAuthErrorCodeAccountExistsWithDifferentCredential` - Indicates the email asserted
-by the credential (e.g. the email in a Facebook access token) is already in use by an
-existing account, that cannot be authenticated with this sign-in method. Call
-fetchProvidersForEmail for this user’s email and then prompt them to sign in with any of
-the sign-in providers returned. This error will only be thrown if the "One account per
-email address" setting is enabled in the Firebase console, under Auth settings.
-+ `FIRAuthErrorCodeUserDisabled` - Indicates the user's account is disabled.
-+ `FIRAuthErrorCodeWrongPassword` - Indicates the user attempted sign in with an
-incorrect password, if credential is of the type EmailPasswordAuthCredential.
-+ `FIRAuthErrorCodeInvalidEmail` - Indicates the email address is malformed.
-+ `FIRAuthErrorCodeMissingVerificationID` - Indicates that the phone auth credential was
-created with an empty verification ID.
-+ `FIRAuthErrorCodeMissingVerificationCode` - Indicates that the phone auth credential
-was created with an empty verification code.
-+ `FIRAuthErrorCodeInvalidVerificationCode` - Indicates that the phone auth credential
-was created with an invalid verification Code.
-+ `FIRAuthErrorCodeInvalidVerificationID` - Indicates that the phone auth credential was
-created with an invalid verification ID.
-+ `FIRAuthErrorCodeSessionExpired` - Indicates that the SMS code has expired.
-*/
 

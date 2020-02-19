@@ -19,7 +19,7 @@ import FBSDKLoginKit
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
-    @IBOutlet weak var facebookLoginButton: FBSDKLoginButton!
+    @IBOutlet weak var facebookLoginButton: FBLoginButton!
     @IBOutlet weak var googleLogin: GIDSignInButton!
     
     override func viewDidLoad() {
@@ -39,7 +39,8 @@ import FBSDKLoginKit
         
         FirebaseAccountManager.signInUserWith(email: email, password: password){ (result) in
             switch result {
-            case .success(let user):
+            case .success(let firebaseUser):
+                AccountManager.shared.currentUser = User(firebaseUser: firebaseUser)
                 self.performSegue(withIdentifier: "appMainPage", sender: self)
             case .failure(let error):
                 self.showErrorHud(FirebaseAccountManager.getStringDescriptionFor(error: error as NSError))
@@ -53,27 +54,27 @@ import FBSDKLoginKit
     
     func setupGoogleSigninButton(){
         GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance()?.presentingViewController = self
         googleLogin.colorScheme = .light
         googleLogin.style = .wide
     }
     
     func setupFacebookSigninButton(){
         facebookLoginButton.delegate = self
-        facebookLoginButton.readPermissions = ["email", "public_profile"]
+        facebookLoginButton.permissions = ["email", "public_profile"]
     }
 
 }
 
-
-extension LoginViewController: FBSDKLoginButtonDelegate {
+extension LoginViewController: LoginButtonDelegate {
     
-    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error?) {
+    func loginButton(_ loginButton: FBLoginButton!, didCompleteWith result: LoginManagerLoginResult!, error: Error?) {
         guard error == nil else {
             self.showErrorHud(FirebaseAccountManager.getStringDescriptionFor(error: error! as NSError))
             return
         }
         
-        guard let accessToken = FBSDKAccessToken.current()?.tokenString else {
+        guard let accessToken = AccessToken.current?.tokenString else {
             return
         }
         
@@ -83,26 +84,26 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
             switch result {
             case .failure(let error):
                 self?.showErrorHud(FirebaseAccountManager.getStringDescriptionFor(error: error as NSError))
-            case .success(let user):
-                FirebaseAccountManager.linkProviderAccountToFirbase(user: user, credential: credential)
+            case .success(let firebaseUser):
+                FirebaseAccountManager.linkProviderAccountToFirbase(user: firebaseUser, credential: credential)
+                AccountManager.shared.currentUser = User(firebaseUser: firebaseUser)
                 self?.performSegue(withIdentifier: "appMainPage", sender: self)
             }
         }
     }
     
-    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!){
+    func loginButtonDidLogOut(_ loginButton: FBLoginButton){
         
     }
     
     func getUserInfoFromFacebook() -> [String:String] {
-        var userDictionary: [String:String]
-        FBSDKGraphRequest(graphPath: "/me" , parameters: ["fields":"id,name,email"]).start( completionHandler: { (connection, result, graphError) in
+        GraphRequest(graphPath: "/me" , parameters: ["fields":"id,name,email"]).start( completionHandler: { (connection, result, graphError) in
             guard graphError == nil else{
                 return
             }
-            userDictionary = result as! [String:String]
+            print(result!)
         })
-        return userDictionary
+        return [:]
     }
     
 }
@@ -124,8 +125,9 @@ extension LoginViewController: GIDSignInDelegate {
             switch result {
             case .failure(let error):
                 self?.showErrorHud(FirebaseAccountManager.getStringDescriptionFor(error: error as NSError))
-            case .success(let user):
-                FirebaseAccountManager.linkProviderAccountToFirbase(user: user, credential: credential)
+            case .success(let firebaseUser):
+                AccountManager.shared.currentUser = User(firebaseUser: firebaseUser)
+                FirebaseAccountManager.linkProviderAccountToFirbase(user: firebaseUser, credential: credential)
                 self?.performSegue(withIdentifier: "appMainPage", sender: self)
             }
         }

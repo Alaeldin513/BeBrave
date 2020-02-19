@@ -11,10 +11,11 @@ import UIKit
 import Firebase
 import FirebaseAuth
 import FirebaseDatabase
+import FirebaseAuth
 
 
 class SignUpViewcontroller: UIViewController {
-    
+    var sdk: FirebaseAuth.User
     var ref: DatabaseReference!
     
     @IBOutlet weak var firstNameTextField: UITextField!
@@ -33,7 +34,8 @@ class SignUpViewcontroller: UIViewController {
         if validateTextFields() {
             FirebaseAccountManager.signUpUserWith(email: emailTextField.text!, password: passwordTextField.text!){ [weak self] (result) in
                 switch result {
-                case .success(let user):
+                case .success(let firebaseUser):
+                    AccountManager.shared.currentUser.firebaseAccount = firebaseUser
                     self?.performSegue(withIdentifier:"UserInformationSegue" , sender: self)
                 case .failure(let error):
                     self?.showErrorHud(FirebaseAccountManager.getStringDescriptionFor(error: error as NSError))
@@ -48,11 +50,11 @@ class SignUpViewcontroller: UIViewController {
     }
     
     func validateTextFields() -> Bool {
-        guard self.emailTextField.text != nil,
+        guard let email = self.emailTextField.text ,
             let password = self.passwordTextField.text,
             let confirmPassword = self.confirmPasswordTextField.text,
-            self.firstNameTextField.text != nil,
-            self.lastNameTextField.text != nil else {
+            let firstName = self.firstNameTextField.text,
+            let lastName = self.lastNameTextField.text else {
                 self.showErrorHud(String.fillInRequiredFieldsErrorMessage)
                 return false
         }
@@ -68,15 +70,13 @@ class SignUpViewcontroller: UIViewController {
                 self.showErrorHud(String.passwordDontMatchErrorMessage)
                 return false
         }
+        AccountManager.shared.currentUser = User(firstName: firstName, lastName: lastName, email: email, phoneNumber: phoneNumber)
         return true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "UserInformationSegue" {
             let userInformationVC = segue.destination as! UserInformationFormViewController
-            userInformationVC.firstName = self.firstNameTextField.text
-            userInformationVC.lastName = self.lastNameTextField.text
-            userInformationVC.phoneNumber = self.phoneNumberTextField.text
         }
     }
     
@@ -88,25 +88,7 @@ extension SignUpViewcontroller: UITextFieldDelegate {
         print("editing")
         return true
     }
-    
-//    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-//        switch textField.tag {
-//        case 0:
-//            self.firstName = textField.text
-//        case 1:
-//            self.lastName = textField.text
-//        case 2:
-//            self.phoneNumber = textField.text
-//        case 3:
-//            self.email = textField.text
-//        case 4:
-//            self.password = textField.text
-//        default:
-//            self.confirmPassword = textField.text
-//        }
-//        return true
-//    }
-    
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
