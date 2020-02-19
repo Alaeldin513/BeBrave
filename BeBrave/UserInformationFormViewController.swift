@@ -36,8 +36,26 @@ class UserInformationFormViewController: UIViewController {
         lastNameTextfield.text = lastName
         phoneNumberTextfield.text = phoneNumber
     }
+    
     @IBAction func submitUserInformation(_ sender: Any) {
         
+    }
+    
+    func persistCoreData() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "User", in: managedContext)!
+        let user = NSManagedObject(entity: entity, insertInto: managedContext)
+        
+        user.setValue(uname, forKeyPath: "name")
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
     }
     
 }

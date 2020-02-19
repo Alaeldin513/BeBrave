@@ -7,17 +7,29 @@
 //
 
 import Foundation
+import Firebase
 
-//extension User {
-//    var firstName: String
-//    var lastName: String
-//    var email: String
-//    var phoneNumber: String
-//    
-//    init (firstName: String, lastName: String, email: String, phoneNumber: String){
-//        self.firstName = firstName
-//        self.lastName = lastName
-//        self.email = email
-//        self.phoneNumber = phoneNumber
-//    }
-//}
+extension User {
+    convenience init (fullName: String, email: String, phoneNumber: String ){
+        self.init()
+        self.fullName = fullName
+        self.email = email
+        self.phoneNumber = phoneNumber
+    }
+    
+    convenience init(firebaseUser: FirebaseAuth.User) {
+        self.init()
+        self.fullName = firebaseUser.displayName
+        self.email = firebaseUser.email
+        self.phoneNumber = firebaseUser.phoneNumber
+    }
+    
+    convenience init(firstName: String, lastName: String, email: String, phoneNumber: String) {
+        self.firstName = firstName
+        self.lastName = lastName
+        self.email = email
+        self.phoneNumber = phoneNumber
+    }
+
+}
+
