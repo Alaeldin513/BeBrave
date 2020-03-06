@@ -59,7 +59,7 @@ import FBSDKLoginKit
         googleLogin.style = .wide
     }
     
-    func setupFacebookSigninButton(){
+    func setupFacebookSigninButton() {
         facebookLoginButton.delegate = self
         facebookLoginButton.permissions = ["email", "public_profile"]
     }
