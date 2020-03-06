@@ -1,8 +1,9 @@
 //
 //  BeBraveUser+CoreDataProperties.swift
-//  
+//  BeBrave
 //
-//  Created by Alaeldin Tirba on 2/18/20.
+//  Created by Alaeldin Tirba on 2/20/20.
+//  Copyright © 2020 Alaeldin Tirba. All rights reserved.
 //
 //
 
@@ -16,7 +17,7 @@ extension BeBraveUser {
         return NSFetchRequest<BeBraveUser>(entityName: "BeBraveUser")
     }
 
-    @NSManaged public var birthday: Int16
+    @NSManaged public var birthday: String?
     @NSManaged public var email: String?
     @NSManaged public var eyeColor: String?
     @NSManaged public var firebaseAccount: User?
@@ -27,6 +28,6 @@ extension BeBraveUser {
     @NSManaged public var height: String?
     @NSManaged public var lastName: String?
     @NSManaged public var phoneNumber: String?
-    @NSManaged public var weight: Int16
+    @NSManaged public var weight: NSDecimalNumber?
 
 }
