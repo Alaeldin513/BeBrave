@@ -21,10 +21,6 @@ class UserInformationFormViewController: UIViewController {
     @IBOutlet weak var eyeColorTextField: UITextField!
     @IBOutlet weak var hairColorTextField: UITextField!
     
-    var phoneNumber: String?
-    var firstName: String?
-    var lastName: String?
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,9 +28,9 @@ class UserInformationFormViewController: UIViewController {
     }
     
     func configure() {
-        firstNameTextfield.text = firstName
-        lastNameTextfield.text = lastName
-        phoneNumberTextfield.text = phoneNumber
+        firstNameTextfield.text = AccountManager.shared.currentUser?.firstName
+        lastNameTextfield.text = AccountManager.shared.currentUser?.lastName
+        phoneNumberTextfield.text = AccountManager.shared.currentUser?.phoneNumber
     }
     
     @IBAction func submitUserInformation(_ sender: Any) {

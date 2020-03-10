@@ -31,6 +31,6 @@ import UIKit
     func updateView(){
         let layer = self.layer as! CAGradientLayer
         layer.colors = [firstColor.cgColor ,secondColor.cgColor]
-        layer.locations = [0.10]
+        layer.locations = [0.80]
     }
 }

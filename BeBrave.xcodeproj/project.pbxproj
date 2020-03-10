@@ -24,9 +24,7 @@
 		69BE628A23FF694E00D238C2 /* BeBraveUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BE628823FF694E00D238C2 /* BeBraveUser+CoreDataProperties.swift */; };
 		69BE628E23FF8B9F00D238C2 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BE628D23FF8B9F00D238C2 /* CoreDataManager.swift */; };
 		69BE62902401906400D238C2 /* PhoneNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BE628F2401906400D238C2 /* PhoneNumberTextField.swift */; };
-		69BE62932401952000D238C2 /* ValidationErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BE62922401952000D238C2 /* ValidationErrors.swift */; };
 		69D4C97523F6133A00257099 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D4C97423F6133A00257099 /* StringExtension.swift */; };
-		69DA95422202A019006D3889 /* BeBraveUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DA95412202A019006D3889 /* BeBraveUser.swift */; };
 		69E88B0B2210EBBB00E95855 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E88B0A2210EBBB00E95855 /* LoginViewController.swift */; };
 		69E88B102210EEA700E95855 /* ViewContollerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E88B0F2210EEA700E95855 /* ViewContollerExtension.swift */; };
 		69E929CC1F0B05FE00EFC42A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E929CB1F0B05FE00EFC42A /* AppDelegate.swift */; };
@@ -93,9 +91,7 @@
 		69BE628823FF694E00D238C2 /* BeBraveUser+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BeBraveUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		69BE628D23FF8B9F00D238C2 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		69BE628F2401906400D238C2 /* PhoneNumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberTextField.swift; sourceTree = "<group>"; };
-		69BE62922401952000D238C2 /* ValidationErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationErrors.swift; sourceTree = "<group>"; };
 		69D4C97423F6133A00257099 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		69DA95412202A019006D3889 /* BeBraveUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeBraveUser.swift; sourceTree = "<group>"; };
 		69E88B0A2210EBBB00E95855 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		69E88B0F2210EEA700E95855 /* ViewContollerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewContollerExtension.swift; sourceTree = "<group>"; };
 		69E929C81F0B05FE00EFC42A /* BeBrave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeBrave.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				69DA95402202A000006D3889 /* Models */,
+				69BE6291240194F500D238C2 /* Managers */,
 				69F1006B2210E85C0052E2A8 /* Controllers */,
 			);
 			name = "Web Services";
@@ -236,9 +233,7 @@
 		69D4C97623F634B800257099 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				69BE6291240194F500D238C2 /* Managers */,
 				69E88B0E2210EE7D00E95855 /* Extensions */,
-				69BE62922401952000D238C2 /* ValidationErrors.swift */,
 			);
 			name = SupportingFiles;
 			sourceTree = "<group>";
@@ -246,7 +241,6 @@
 		69DA95402202A000006D3889 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				69DA95412202A019006D3889 /* BeBraveUser.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -607,11 +601,9 @@
 				69BE628923FF694E00D238C2 /* BeBraveUser+CoreDataClass.swift in Sources */,
 				69E929FF1F0BE3D200EFC42A /* SignUpViewController.swift in Sources */,
 				697D89731F4542420019D14D /* GoogleButton.swift in Sources */,
-				69BE62932401952000D238C2 /* ValidationErrors.swift in Sources */,
 				697D897A1F45F01A0019D14D /* DesignableImage.swift in Sources */,
 				69D4C97523F6133A00257099 /* StringExtension.swift in Sources */,
 				69E88B0B2210EBBB00E95855 /* LoginViewController.swift in Sources */,
-				69DA95422202A019006D3889 /* BeBraveUser.swift in Sources */,
 				69545F8423FB934600115100 /* AccountManager.swift in Sources */,
 				69F1006A2210E7DB0052E2A8 /* FirebaseController.swift in Sources */,
 				69BE628A23FF694E00D238C2 /* BeBraveUser+CoreDataProperties.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 import GoogleSignIn
-
+import FacebookLogin
 @IBDesignable class GoogleButton: GIDSignInButton {
     
 
@@ -31,3 +31,4 @@ import GoogleSignIn
     }
 
 }
+
