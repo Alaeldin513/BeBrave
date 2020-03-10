@@ -16,13 +16,28 @@ extension UIViewController {
         DispatchQueue.main.async {
             let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
             hud.mode = .text
+            hud.minSize = CGSize(width: self.view.frame.size.width-20, height: 100)
             hud.label.text = "Error"
             hud.detailsLabel.text = message
-            hud.bezelView.color = .red
-            hud.detailsLabel.textColor = .white
-            hud.label.textColor = UIColor(red: 150 , green: 47, blue: 46, alpha: 1)
+            hud.bezelView.color = UIColor(red: 250, green: 20, blue: 20, alpha: 1)
+            hud.detailsLabel.textColor = .red
+            hud.label.textColor = .red
             hud.isUserInteractionEnabled = false
             hud.hide(animated: true, afterDelay: 3)
+        }
+    }
+    
+    @objc private func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height * 17/32
+            }
+        }
+    }
+    
+    @objc private func keyboardWillHide(notification: NSNotification) {
+        if view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
         }
     }
     
