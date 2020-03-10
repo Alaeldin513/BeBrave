@@ -3,18 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04E48B3F082FD95F92874C35 /* Pods_BeBraveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6159B324D940C4A7BDDBDEB /* Pods_BeBraveUITests.framework */; };
-		1D53B30CFD0566DB92C43FE6 /* Pods_BeBrave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA8944122E846502E044495 /* Pods_BeBrave.framework */; };
+		004FB8A26FCFAE05F9AF9204 /* libPods-BeBrave.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DC8173D9F63AD50B4630CD9 /* libPods-BeBrave.a */; };
 		6921B3431FDC6F40007F0BAF /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6921B3421FDC6F40007F0BAF /* ContactViewController.swift */; };
-		692302A923FCE8AB00BEA9B2 /* BeBraveUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692302A823FCE8AB00BEA9B2 /* BeBraveUser+CoreDataProperties.swift */; };
-		692302AF23FCE9E200BEA9B2 /* BeBraveUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692302AE23FCE9E200BEA9B2 /* BeBraveUser+CoreDataClass.swift */; };
-		692302B423FCEA9E00BEA9B2 /* BeBrave.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 692302B223FCEA9E00BEA9B2 /* BeBrave.xcdatamodeld */; };
 		692F966D2213A5BA00188681 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 692F966C2213A5BA00188681 /* GoogleService-Info.plist */; };
 		692F966F2213AC2000188681 /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692F966E2213AC2000188681 /* StyleKit.swift */; };
+		69511526240F458400ADA542 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69511525240F458400ADA542 /* Foundation.framework */; };
 		69545F8423FB934600115100 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69545F8323FB934600115100 /* AccountManager.swift */; };
 		697B65DC2238A982008D9F36 /* UserInformationFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697B65DB2238A982008D9F36 /* UserInformationFormViewController.swift */; };
 		697D89731F4542420019D14D /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697D89721F4542420019D14D /* GoogleButton.swift */; };
@@ -22,18 +19,25 @@
 		697D897A1F45F01A0019D14D /* DesignableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697D89791F45F01A0019D14D /* DesignableImage.swift */; };
 		697D897E1F46892C0019D14D /* DesignableUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697D897D1F46892C0019D14D /* DesignableUIView.swift */; };
 		69A0CE3121E11C11001A92B7 /* BeBraveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A0CE3021E11C11001A92B7 /* BeBraveTests.swift */; };
+		69BE628023FF63BB00D238C2 /* BeBrave.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69BE627E23FF63BB00D238C2 /* BeBrave.xcdatamodeld */; };
+		69BE628923FF694E00D238C2 /* BeBraveUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BE628723FF694E00D238C2 /* BeBraveUser+CoreDataClass.swift */; };
+		69BE628A23FF694E00D238C2 /* BeBraveUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BE628823FF694E00D238C2 /* BeBraveUser+CoreDataProperties.swift */; };
+		69BE628E23FF8B9F00D238C2 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BE628D23FF8B9F00D238C2 /* CoreDataManager.swift */; };
+		69BE62902401906400D238C2 /* PhoneNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BE628F2401906400D238C2 /* PhoneNumberTextField.swift */; };
+		69BE62932401952000D238C2 /* ValidationErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BE62922401952000D238C2 /* ValidationErrors.swift */; };
 		69D4C97523F6133A00257099 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D4C97423F6133A00257099 /* StringExtension.swift */; };
 		69DA95422202A019006D3889 /* BeBraveUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DA95412202A019006D3889 /* BeBraveUser.swift */; };
-		69E88B0B2210EBBB00E95855 /* AccountLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E88B0A2210EBBB00E95855 /* AccountLoginViewController.swift */; };
+		69E88B0B2210EBBB00E95855 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E88B0A2210EBBB00E95855 /* LoginViewController.swift */; };
 		69E88B102210EEA700E95855 /* ViewContollerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E88B0F2210EEA700E95855 /* ViewContollerExtension.swift */; };
 		69E929CC1F0B05FE00EFC42A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E929CB1F0B05FE00EFC42A /* AppDelegate.swift */; };
 		69E929D11F0B05FE00EFC42A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69E929CF1F0B05FE00EFC42A /* Main.storyboard */; };
 		69E929D61F0B05FE00EFC42A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69E929D51F0B05FE00EFC42A /* Assets.xcassets */; };
 		69E929D91F0B05FE00EFC42A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69E929D71F0B05FE00EFC42A /* LaunchScreen.storyboard */; };
-		69E929FF1F0BE3D200EFC42A /* AccountSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E929FE1F0BE3D200EFC42A /* AccountSignUpViewController.swift */; };
+		69E929FF1F0BE3D200EFC42A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E929FE1F0BE3D200EFC42A /* SignUpViewController.swift */; };
 		69E92A031F1128C700EFC42A /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E92A021F1128C700EFC42A /* MainPageViewController.swift */; };
 		69F1006A2210E7DB0052E2A8 /* FirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F100692210E7DB0052E2A8 /* FirebaseController.swift */; };
-		9C898B2536C338690A4FAFFB /* Pods_BeBraveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81EE2B0EFD9F7C6AF84DB6EC /* Pods_BeBraveTests.framework */; };
+		7ED0B8A8DAD7ECDD54FACAB1 /* libPods-BeBraveUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0826FEBD4098650FD69B2F87 /* libPods-BeBraveUITests.a */; };
+		FB7577C815D9768811105C7F /* libPods-BeBraveTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0615C9D25F1404D40183F0 /* libPods-BeBraveTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,16 +58,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4D8924FC692406A80B43025E /* Pods-BeBraveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeBraveUITests.debug.xcconfig"; path = "Target Support Files/Pods-BeBraveUITests/Pods-BeBraveUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		4DA8944122E846502E044495 /* Pods_BeBrave.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeBrave.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		64971DD46E8751BA451FC2B9 /* Pods-BeBrave.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeBrave.release.xcconfig"; path = "Target Support Files/Pods-BeBrave/Pods-BeBrave.release.xcconfig"; sourceTree = "<group>"; };
+		05F2E07CC2D492C3239A9E8C /* Pods-BeBrave.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeBrave.release.xcconfig"; path = "Target Support Files/Pods-BeBrave/Pods-BeBrave.release.xcconfig"; sourceTree = "<group>"; };
+		0826FEBD4098650FD69B2F87 /* libPods-BeBraveUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BeBraveUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		125DBBFB6BCF55EA79B1576F /* Pods-BeBraveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeBraveTests.release.xcconfig"; path = "Target Support Files/Pods-BeBraveTests/Pods-BeBraveTests.release.xcconfig"; sourceTree = "<group>"; };
+		1CE42EBC15A1413C12EC2DF0 /* Pods-BeBrave.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeBrave.debug.xcconfig"; path = "Target Support Files/Pods-BeBrave/Pods-BeBrave.debug.xcconfig"; sourceTree = "<group>"; };
+		29CA79949E9B0BEBC1B3E508 /* Pods-BeBraveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeBraveUITests.debug.xcconfig"; path = "Target Support Files/Pods-BeBraveUITests/Pods-BeBraveUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4F0615C9D25F1404D40183F0 /* libPods-BeBraveTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BeBraveTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		545A6C72839D1781AA7A154B /* Pods-BeBraveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeBraveTests.debug.xcconfig"; path = "Target Support Files/Pods-BeBraveTests/Pods-BeBraveTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6921B3421FDC6F40007F0BAF /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
-		692302A823FCE8AB00BEA9B2 /* BeBraveUser+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "BeBraveUser+CoreDataProperties.swift"; path = "BeBrave/BeBraveUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		692302AE23FCE9E200BEA9B2 /* BeBraveUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "BeBraveUser+CoreDataClass.swift"; path = "/Users/alaeldintirba/Development/IOS/BeBrave/BeBraveUser+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		692302B323FCEA9E00BEA9B2 /* Assault_Prevention.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Assault_Prevention.xcdatamodel; sourceTree = "<group>"; };
 		692578B01FD247CE0063BFC1 /* BeBrave.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BeBrave.entitlements; sourceTree = "<group>"; };
 		692F966C2213A5BA00188681 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		692F966E2213AC2000188681 /* StyleKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleKit.swift; sourceTree = "<group>"; };
+		694BCEC42409FC37006C5960 /* ATGValidator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ATGValidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69511525240F458400ADA542 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		69511529240F48B400ADA542 /* ATGValidator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ATGValidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6951EBED240AB4A0002EAD60 /* ATGValidator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ATGValidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6951EBF5240ABB81002EAD60 /* AppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6951EBF9240ABFEA002EAD60 /* ATGValidator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ATGValidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69545F7B23FB771900115100 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69545F7D23FB77A000115100 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69545F7F23FB781C00115100 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
@@ -77,9 +88,15 @@
 		69A0CE2E21E11C11001A92B7 /* BeBraveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeBraveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69A0CE3021E11C11001A92B7 /* BeBraveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeBraveTests.swift; sourceTree = "<group>"; };
 		69A0CE3221E11C11001A92B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69BE627F23FF63BB00D238C2 /* BeBrave.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeBrave.xcdatamodel; sourceTree = "<group>"; };
+		69BE628723FF694E00D238C2 /* BeBraveUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BeBraveUser+CoreDataClass.swift"; sourceTree = "<group>"; };
+		69BE628823FF694E00D238C2 /* BeBraveUser+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BeBraveUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		69BE628D23FF8B9F00D238C2 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		69BE628F2401906400D238C2 /* PhoneNumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberTextField.swift; sourceTree = "<group>"; };
+		69BE62922401952000D238C2 /* ValidationErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationErrors.swift; sourceTree = "<group>"; };
 		69D4C97423F6133A00257099 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		69DA95412202A019006D3889 /* BeBraveUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeBraveUser.swift; sourceTree = "<group>"; };
-		69E88B0A2210EBBB00E95855 /* AccountLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountLoginViewController.swift; sourceTree = "<group>"; };
+		69E88B0A2210EBBB00E95855 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		69E88B0F2210EEA700E95855 /* ViewContollerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewContollerExtension.swift; sourceTree = "<group>"; };
 		69E929C81F0B05FE00EFC42A /* BeBrave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeBrave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E929CB1F0B05FE00EFC42A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,15 +106,11 @@
 		69E929DA1F0B05FE00EFC42A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69E929EE1F0B05FE00EFC42A /* BeBraveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeBraveUITests.swift; sourceTree = "<group>"; };
 		69E929F01F0B05FE00EFC42A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		69E929FE1F0BE3D200EFC42A /* AccountSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSignUpViewController.swift; sourceTree = "<group>"; };
+		69E929FE1F0BE3D200EFC42A /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		69E92A021F1128C700EFC42A /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		69F100692210E7DB0052E2A8 /* FirebaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseController.swift; sourceTree = "<group>"; };
-		75871D990932C0A4736AF28B /* Pods-BeBrave.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeBrave.debug.xcconfig"; path = "Target Support Files/Pods-BeBrave/Pods-BeBrave.debug.xcconfig"; sourceTree = "<group>"; };
-		81EE2B0EFD9F7C6AF84DB6EC /* Pods_BeBraveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeBraveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8CCBBDF74B8AD2342BCF2616 /* Pods-BeBraveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeBraveUITests.release.xcconfig"; path = "Target Support Files/Pods-BeBraveUITests/Pods-BeBraveUITests.release.xcconfig"; sourceTree = "<group>"; };
-		A6159B324D940C4A7BDDBDEB /* Pods_BeBraveUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeBraveUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A64CE36E00F115D827783C66 /* Pods-BeBraveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeBraveTests.release.xcconfig"; path = "Target Support Files/Pods-BeBraveTests/Pods-BeBraveTests.release.xcconfig"; sourceTree = "<group>"; };
-		FAD5B975371642A78B42999B /* Pods-BeBraveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeBraveTests.debug.xcconfig"; path = "Target Support Files/Pods-BeBraveTests/Pods-BeBraveTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7DC8173D9F63AD50B4630CD9 /* libPods-BeBrave.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BeBrave.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6A3CF42CC60153D45232569 /* Pods-BeBraveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeBraveUITests.release.xcconfig"; path = "Target Support Files/Pods-BeBraveUITests/Pods-BeBraveUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04E48B3F082FD95F92874C35 /* Pods_BeBraveUITests.framework in Frameworks */,
+				7ED0B8A8DAD7ECDD54FACAB1 /* libPods-BeBraveUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,7 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C898B2536C338690A4FAFFB /* Pods_BeBraveTests.framework in Frameworks */,
+				FB7577C815D9768811105C7F /* libPods-BeBraveTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +134,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D53B30CFD0566DB92C43FE6 /* Pods_BeBrave.framework in Frameworks */,
+				69511526240F458400ADA542 /* Foundation.framework in Frameworks */,
+				004FB8A26FCFAE05F9AF9204 /* libPods-BeBrave.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,12 +145,12 @@
 		612F759F355588DBE24F32DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				75871D990932C0A4736AF28B /* Pods-BeBrave.debug.xcconfig */,
-				64971DD46E8751BA451FC2B9 /* Pods-BeBrave.release.xcconfig */,
-				FAD5B975371642A78B42999B /* Pods-BeBraveTests.debug.xcconfig */,
-				A64CE36E00F115D827783C66 /* Pods-BeBraveTests.release.xcconfig */,
-				4D8924FC692406A80B43025E /* Pods-BeBraveUITests.debug.xcconfig */,
-				8CCBBDF74B8AD2342BCF2616 /* Pods-BeBraveUITests.release.xcconfig */,
+				1CE42EBC15A1413C12EC2DF0 /* Pods-BeBrave.debug.xcconfig */,
+				05F2E07CC2D492C3239A9E8C /* Pods-BeBrave.release.xcconfig */,
+				545A6C72839D1781AA7A154B /* Pods-BeBraveTests.debug.xcconfig */,
+				125DBBFB6BCF55EA79B1576F /* Pods-BeBraveTests.release.xcconfig */,
+				29CA79949E9B0BEBC1B3E508 /* Pods-BeBraveUITests.debug.xcconfig */,
+				C6A3CF42CC60153D45232569 /* Pods-BeBraveUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -144,12 +158,18 @@
 		6515F76012A8482907C64436 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				69511529240F48B400ADA542 /* ATGValidator.framework */,
+				69511525240F458400ADA542 /* Foundation.framework */,
+				6951EBF9240ABFEA002EAD60 /* ATGValidator.framework */,
+				6951EBF5240ABB81002EAD60 /* AppAuth.framework */,
+				6951EBED240AB4A0002EAD60 /* ATGValidator.framework */,
+				694BCEC42409FC37006C5960 /* ATGValidator.framework */,
 				69545F7F23FB781C00115100 /* Accelerate.framework */,
 				69545F7D23FB77A000115100 /* FBSDKCoreKit.framework */,
 				69545F7B23FB771900115100 /* FBSDKCoreKit.framework */,
-				4DA8944122E846502E044495 /* Pods_BeBrave.framework */,
-				81EE2B0EFD9F7C6AF84DB6EC /* Pods_BeBraveTests.framework */,
-				A6159B324D940C4A7BDDBDEB /* Pods_BeBraveUITests.framework */,
+				7DC8173D9F63AD50B4630CD9 /* libPods-BeBrave.a */,
+				4F0615C9D25F1404D40183F0 /* libPods-BeBraveTests.a */,
+				0826FEBD4098650FD69B2F87 /* libPods-BeBraveUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -190,6 +210,7 @@
 				697D89791F45F01A0019D14D /* DesignableImage.swift */,
 				697D897D1F46892C0019D14D /* DesignableUIView.swift */,
 				692F966E2213AC2000188681 /* StyleKit.swift */,
+				69BE628F2401906400D238C2 /* PhoneNumberTextField.swift */,
 			);
 			name = IBDesignable;
 			sourceTree = "<group>";
@@ -203,10 +224,21 @@
 			path = BeBraveTests;
 			sourceTree = "<group>";
 		};
+		69BE6291240194F500D238C2 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				69545F8323FB934600115100 /* AccountManager.swift */,
+				69BE628D23FF8B9F00D238C2 /* CoreDataManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
 		69D4C97623F634B800257099 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				69BE6291240194F500D238C2 /* Managers */,
 				69E88B0E2210EE7D00E95855 /* Extensions */,
+				69BE62922401952000D238C2 /* ValidationErrors.swift */,
 			);
 			name = SupportingFiles;
 			sourceTree = "<group>";
@@ -231,9 +263,7 @@
 		69E929BF1F0B05FE00EFC42A = {
 			isa = PBXGroup;
 			children = (
-				692302B223FCEA9E00BEA9B2 /* BeBrave.xcdatamodeld */,
-				692302AE23FCE9E200BEA9B2 /* BeBraveUser+CoreDataClass.swift */,
-				692302A823FCE8AB00BEA9B2 /* BeBraveUser+CoreDataProperties.swift */,
+				69BE627E23FF63BB00D238C2 /* BeBrave.xcdatamodeld */,
 				69E929CA1F0B05FE00EFC42A /* BeBrave */,
 				69E929ED1F0B05FE00EFC42A /* BeBraveUITests */,
 				69A0CE2F21E11C11001A92B7 /* BeBraveTests */,
@@ -256,6 +286,8 @@
 		69E929CA1F0B05FE00EFC42A /* BeBrave */ = {
 			isa = PBXGroup;
 			children = (
+				69BE628723FF694E00D238C2 /* BeBraveUser+CoreDataClass.swift */,
+				69BE628823FF694E00D238C2 /* BeBraveUser+CoreDataProperties.swift */,
 				69E929CB1F0B05FE00EFC42A /* AppDelegate.swift */,
 				69E929D51F0B05FE00EFC42A /* Assets.xcassets */,
 				692F96652213A18200188681 /* Storyboards */,
@@ -299,9 +331,8 @@
 		69F1006C2210E9BA0052E2A8 /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				69545F8323FB934600115100 /* AccountManager.swift */,
-				69E929FE1F0BE3D200EFC42A /* AccountSignUpViewController.swift */,
-				69E88B0A2210EBBB00E95855 /* AccountLoginViewController.swift */,
+				69E929FE1F0BE3D200EFC42A /* SignUpViewController.swift */,
+				69E88B0A2210EBBB00E95855 /* LoginViewController.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -313,7 +344,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 69A0CE2721E11C07001A92B7 /* Build configuration list for PBXNativeTarget "BeBraveUITests" */;
 			buildPhases = (
-				A52EFBC2B82E4DEC9A3854BD /* [CP] Check Pods Manifest.lock */,
+				3A1C57582C039736BB089BFC /* [CP] Check Pods Manifest.lock */,
 				69A0CE1C21E11C07001A92B7 /* Sources */,
 				69A0CE1D21E11C07001A92B7 /* Frameworks */,
 				69A0CE1E21E11C07001A92B7 /* Resources */,
@@ -332,7 +363,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 69A0CE3521E11C11001A92B7 /* Build configuration list for PBXNativeTarget "BeBraveTests" */;
 			buildPhases = (
-				379AA280767D901829A1348C /* [CP] Check Pods Manifest.lock */,
+				4E1606BEB1BC7E10C4BFED6A /* [CP] Check Pods Manifest.lock */,
 				69A0CE2A21E11C11001A92B7 /* Sources */,
 				69A0CE2B21E11C11001A92B7 /* Frameworks */,
 				69A0CE2C21E11C11001A92B7 /* Resources */,
@@ -351,12 +382,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 69E929F31F0B05FE00EFC42A /* Build configuration list for PBXNativeTarget "BeBrave" */;
 			buildPhases = (
-				3F6988559CB2921B5D3E7561 /* [CP] Check Pods Manifest.lock */,
+				783EA39964F061C70134EEF8 /* [CP] Check Pods Manifest.lock */,
 				69E929C41F0B05FE00EFC42A /* Sources */,
 				69E929C51F0B05FE00EFC42A /* Frameworks */,
 				69E929C61F0B05FE00EFC42A /* Resources */,
-				6FE3C6E6775291AF2880B4E7 /* [CP] Embed Pods Frameworks */,
-				852896B977B51FD11D854712 /* [CP] Copy Pods Resources */,
+				D9EBB980F65B2C66FB34F924 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -403,7 +433,7 @@
 				};
 			};
 			buildConfigurationList = 69E929C31F0B05FE00EFC42A /* Build configuration list for PBXProject "BeBrave" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -452,7 +482,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		379AA280767D901829A1348C /* [CP] Check Pods Manifest.lock */ = {
+		3A1C57582C039736BB089BFC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BeBraveUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E1606BEB1BC7E10C4BFED6A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -474,7 +526,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3F6988559CB2921B5D3E7561 /* [CP] Check Pods Manifest.lock */ = {
+		783EA39964F061C70134EEF8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -496,55 +548,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6FE3C6E6775291AF2880B4E7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BeBrave/Pods-BeBrave-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMAppAuth/GTMAppAuth.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMAppAuth.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeBrave/Pods-BeBrave-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		852896B977B51FD11D854712 /* [CP] Copy Pods Resources */ = {
+		D9EBB980F65B2C66FB34F924 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -553,39 +557,19 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BeBrave/Pods-BeBrave-resources.sh",
+				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeBrave/Pods-BeBrave-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A52EFBC2B82E4DEC9A3854BD /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BeBraveUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -610,25 +594,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				692302B423FCEA9E00BEA9B2 /* BeBrave.xcdatamodeld in Sources */,
 				697D897E1F46892C0019D14D /* DesignableUIView.swift in Sources */,
 				697B65DC2238A982008D9F36 /* UserInformationFormViewController.swift in Sources */,
+				69BE628E23FF8B9F00D238C2 /* CoreDataManager.swift in Sources */,
+				69BE62902401906400D238C2 /* PhoneNumberTextField.swift in Sources */,
 				69E92A031F1128C700EFC42A /* MainPageViewController.swift in Sources */,
 				692F966F2213AC2000188681 /* StyleKit.swift in Sources */,
 				69E929CC1F0B05FE00EFC42A /* AppDelegate.swift in Sources */,
 				6921B3431FDC6F40007F0BAF /* ContactViewController.swift in Sources */,
 				697D89761F45DFD30019D14D /* DesignableButton.swift in Sources */,
 				69E88B102210EEA700E95855 /* ViewContollerExtension.swift in Sources */,
-				69E929FF1F0BE3D200EFC42A /* AccountSignUpViewController.swift in Sources */,
+				69BE628923FF694E00D238C2 /* BeBraveUser+CoreDataClass.swift in Sources */,
+				69E929FF1F0BE3D200EFC42A /* SignUpViewController.swift in Sources */,
 				697D89731F4542420019D14D /* GoogleButton.swift in Sources */,
-				692302A923FCE8AB00BEA9B2 /* BeBraveUser+CoreDataProperties.swift in Sources */,
+				69BE62932401952000D238C2 /* ValidationErrors.swift in Sources */,
 				697D897A1F45F01A0019D14D /* DesignableImage.swift in Sources */,
 				69D4C97523F6133A00257099 /* StringExtension.swift in Sources */,
-				69E88B0B2210EBBB00E95855 /* AccountLoginViewController.swift in Sources */,
+				69E88B0B2210EBBB00E95855 /* LoginViewController.swift in Sources */,
 				69DA95422202A019006D3889 /* BeBraveUser.swift in Sources */,
 				69545F8423FB934600115100 /* AccountManager.swift in Sources */,
-				692302AF23FCE9E200BEA9B2 /* BeBraveUser+CoreDataClass.swift in Sources */,
 				69F1006A2210E7DB0052E2A8 /* FirebaseController.swift in Sources */,
+				69BE628A23FF694E00D238C2 /* BeBraveUser+CoreDataProperties.swift in Sources */,
+				69BE628023FF63BB00D238C2 /* BeBrave.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,7 +656,7 @@
 /* Begin XCBuildConfiguration section */
 		69A0CE2821E11C07001A92B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D8924FC692406A80B43025E /* Pods-BeBraveUITests.debug.xcconfig */;
+			baseConfigurationReference = 29CA79949E9B0BEBC1B3E508 /* Pods-BeBraveUITests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -680,7 +667,11 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = BeBraveUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Alaeldin.BeBraveUITests;
@@ -693,7 +684,7 @@
 		};
 		69A0CE2921E11C07001A92B7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8CCBBDF74B8AD2342BCF2616 /* Pods-BeBraveUITests.release.xcconfig */;
+			baseConfigurationReference = C6A3CF42CC60153D45232569 /* Pods-BeBraveUITests.release.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -704,7 +695,11 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = BeBraveUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Alaeldin.BeBraveUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -716,7 +711,7 @@
 		};
 		69A0CE3621E11C11001A92B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FAD5B975371642A78B42999B /* Pods-BeBraveTests.debug.xcconfig */;
+			baseConfigurationReference = 545A6C72839D1781AA7A154B /* Pods-BeBraveTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -728,7 +723,11 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = BeBraveTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Alaeldin.BeBraveTests;
@@ -741,7 +740,7 @@
 		};
 		69A0CE3721E11C11001A92B7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A64CE36E00F115D827783C66 /* Pods-BeBraveTests.release.xcconfig */;
+			baseConfigurationReference = 125DBBFB6BCF55EA79B1576F /* Pods-BeBraveTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -753,7 +752,11 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = BeBraveTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Alaeldin.BeBraveTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -766,6 +769,7 @@
 		69E929F11F0B05FE00EFC42A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -825,6 +829,7 @@
 		69E929F21F0B05FE00EFC42A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -869,20 +874,22 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = BeBrave;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		69E929F41F0B05FE00EFC42A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75871D990932C0A4736AF28B /* Pods-BeBrave.debug.xcconfig */;
+			baseConfigurationReference = 1CE42EBC15A1413C12EC2DF0 /* Pods-BeBrave.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "BeBrave/Supporting Plist Files/BeBrave.entitlements";
 				DEVELOPMENT_TEAM = FGKH9597NF;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/BeBrave/Supporting Plist Files/info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Alaeldin.BeBrave;
 				PRODUCT_NAME = BeBrave;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
@@ -892,13 +899,14 @@
 		};
 		69E929F51F0B05FE00EFC42A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 64971DD46E8751BA451FC2B9 /* Pods-BeBrave.release.xcconfig */;
+			baseConfigurationReference = 05F2E07CC2D492C3239A9E8C /* Pods-BeBrave.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "BeBrave/Supporting Plist Files/BeBrave.entitlements";
 				DEVELOPMENT_TEAM = FGKH9597NF;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/BeBrave/Supporting Plist Files/info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Alaeldin.BeBrave;
 				PRODUCT_NAME = BeBrave;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
@@ -948,12 +956,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		692302B223FCEA9E00BEA9B2 /* BeBrave.xcdatamodeld */ = {
+		69BE627E23FF63BB00D238C2 /* BeBrave.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				692302B323FCEA9E00BEA9B2 /* Assault_Prevention.xcdatamodel */,
+				69BE627F23FF63BB00D238C2 /* BeBrave.xcdatamodel */,
 			);
-			currentVersion = 692302B323FCEA9E00BEA9B2 /* Assault_Prevention.xcdatamodel */;
+			currentVersion = 69BE627F23FF63BB00D238C2 /* BeBrave.xcdatamodel */;
 			name = BeBrave.xcdatamodeld;
 			path = BeBrave/BeBrave.xcdatamodeld;
 			sourceTree = "<group>";
