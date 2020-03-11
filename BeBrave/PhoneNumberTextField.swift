@@ -11,13 +11,16 @@ import ATGValidator
 import UIKit
 extension UITextField {
     func setLeft(image: UIImage) {
-        self.leftViewMode = .always
-        let imageView = UIImageView()
-        let newImage = image.withRenderingMode(.alwaysTemplate)
-        imageView.image = newImage
+        let imageView = UIImageView(frame: CGRect(x:0, y: 0, width:self.frame.height-5, height:self.frame.height-5))
+        let iconContainerView: UIView = UIView(frame:
+            CGRect(x: 20, y: 0, width: self.frame.height, height: self.frame.height))
+        
         imageView.tintColor = .white
-        imageView.frame = CGRect(x:0, y: 0, width: self.frame.height-10, height: self.frame.height-10)
-        self.leftView = imageView
+        imageView.image = image
+        iconContainerView.addSubview(imageView)
+        leftView = iconContainerView
+        leftViewMode = .always
+        
     }
     
     func addSingleLineSublayer(color: UIColor){
