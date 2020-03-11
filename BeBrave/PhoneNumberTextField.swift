@@ -40,7 +40,7 @@ extension UITextField {
                 if formValidatorErrors.contains(textFieldError) ?? false {
                     return textFieldError
                 }
-        }
+            }
         }
         return nil
     }
@@ -59,7 +59,7 @@ class NameTextField: UITextField {
         if let image = UIImage(named: "icons8-contacts-50") {
             self.setLeft(image: image)
         }
-        setPlaceHolder(text: "First Name")
+        setPlaceHolder(text: placeholder ?? "")
         addSingleLineSublayer(color: .white)
     }
     
@@ -76,7 +76,7 @@ class PhoneNumberTextField: UITextField {
         if let image = UIImage(named: "icons8-phone-50") {
             self.setLeft(image: image)
         }
-        setPlaceHolder(text: "Phone Number")
+        setPlaceHolder(text: placeholder ?? "")
         addSingleLineSublayer(color: .white)
     }
 }
@@ -92,7 +92,7 @@ class EmailTextField: UITextField {
         if let image = UIImage(named: "icons8-email-open-50") {
             self.setLeft(image: image)
         }
-        setPlaceHolder(text: "Email")
+        setPlaceHolder(text: placeholder ?? "")
         addSingleLineSublayer(color: .white)
     }
 }
@@ -109,7 +109,7 @@ class PasswordTextField: UITextField {
             self.setLeft(image: image)
         }
         addSingleLineSublayer(color: .white)
-        setPlaceHolder(text: "Password")
+        setPlaceHolder(text: placeholder ?? "")
     }
 }
 
