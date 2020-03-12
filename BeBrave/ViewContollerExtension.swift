@@ -27,17 +27,34 @@ extension UIViewController {
         }
     }
     
-    @objc private func keyboardWillShow(notification: NSNotification) {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    func keyboardPushesViewUpWhenTapped() {
+        NotificationCenter.default.addObserver(self, selector: #selector(UIViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(UIViewController.keyboardWillHide), name: UIResponder.keyboardDidHideNotification, object: nil)
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if view.frame.origin.y == 0 {
+            if self.view.frame.origin.y == 0 {
                 self.view.frame.origin.y -= keyboardSize.height * 17/32
             }
         }
     }
     
-    @objc private func keyboardWillHide(notification: NSNotification) {
-        if view.frame.origin.y != 0 {
-            self.view.frame.origin.y = 0
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.frame.origin.y = 0
+            })
         }
     }
     

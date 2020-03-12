@@ -31,7 +31,8 @@ class SignUpViewcontroller: UIViewController {
     
     override func viewDidLoad() {
         ref = Database.database().reference()
-        firstNameTextField.delegate = self
+        keyboardPushesViewUpWhenTapped()
+        hideKeyboardWhenTappedAround()
         confirmPasswordTextField.validationRules? = [StringValueMatchRule(base: passwordTextField)]
         self.formValidation = FormValidation(itemsToValidate: [firstNameTextField,
                                                                lastNameTextField,
