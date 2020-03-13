@@ -12,21 +12,29 @@ import GoogleSignIn
 
 class MainPageViewController: UIViewController {
 
+    @IBOutlet weak var displayName: UILabel!
+    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var height: UILabel!
+    @IBOutlet weak var weightLabel: UILabel!
+    @IBOutlet weak var eyeColorLabel: UILabel!
+    @IBOutlet weak var hairColorLabel: UILabel!
+    @IBOutlet weak var birthdayLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        getCurrentUser()
+        setupText()
     }
-
-    func getCurrentUser(){
-        let user = Auth.auth().currentUser
-        if let user = user {
-            let uid = user.uid
-            let email = user.email
-            let photoURL = user.photoURL
-        }
-
+   
+    
+    func setupText() {
+        displayName.text = AccountManager.shared.currentUser?.fullName ?? ""
+        genderLabel.text = AccountManager.shared.currentUser?.gender ?? ""
+        height.text = AccountManager.shared.currentUser?.height ?? ""
+        weightLabel.text = String(describing: AccountManager.shared.currentUser?.weight ?? 0)
+        eyeColorLabel.text = AccountManager.shared.currentUser?.eyeColor ?? ""
+        hairColorLabel.text = AccountManager.shared.currentUser?.hairColor ?? ""
+        birthdayLabel.text = AccountManager.shared.currentUser?.birthday
     }
-
     
     @IBAction func signOut(_ sender: Any) {
         

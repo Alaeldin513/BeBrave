@@ -3,16 +3,19 @@
 
 target 'BeBrave' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
+  #use_frameworks!
+  use_modular_headers!
 
   # Pods for BeBrace
 	pod 'Firebase/Core'
 	pod 'Firebase/Auth'
 	pod 'Firebase/Database'
 	pod 'GoogleSignIn'
-    pod 'FacebookCore', '~> 0.2'
-    pod 'FacebookLogin', '~> 0.2'
-    pod 'FacebookShare', '~> 0.2'
+    	pod 'FacebookCore' 
+    	pod 'FacebookLogin' 
+    	pod 'FacebookShare' 
+	pod 'MBProgressHUD', '~> 1.1.0'
+  pod 'ATGValidator', '~> 1.2.0'
 
   target 'BeBraveTests' do
     inherit! :search_paths
@@ -23,7 +26,4 @@ target 'BeBrave' do
     inherit! :search_paths
     # Pods for testing
   end
-	
-
-
 end
