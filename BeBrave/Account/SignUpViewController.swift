@@ -49,6 +49,7 @@ class SignUpViewcontroller: UIViewController {
             FirebaseAccountManager.signUpUserWith(email: emailTextField.text!, password: passwordTextField.text!){ [weak self] (result) in
                 switch result {
                 case .success(let firebaseUser):
+                    self?.createUser()
                     AccountManager.shared.currentUser?.firebaseAccount = firebaseUser
                     self?.performSegue(withIdentifier:"UserInformationSegue" , sender: self)
                 case .failure(let error):
@@ -56,28 +57,60 @@ class SignUpViewcontroller: UIViewController {
                 }
             }
         } else {
+            checkForInvalidFields()
             self.showErrorHud(String.genericServerErrorMessage)
         }
     }
     
+    func checkForInvalidFields() {
+        for textfield in textFieldsToValidate ?? [] {
+            if textfield.validValue == nil {
+                textfield.changeTextFieldTo(color: .red)
+            }
+        }
+       errorLabelShow(errorString: String.multipleInvalidFormFieldsErrorMessage)
+    }
+    
     @IBAction func returnToSignIn(_ sender: UIButton) {
-//        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "loginViewController") as! LoginViewController
-//        self.present(viewController, animated: true, completion: nil)
         self.presentingViewController?.dismiss(animated: true)
     }
     
     func createUser() -> Bool {
-        guard self.phoneNumberTextField.text?.isEmpty ?? false,
-            self.emailTextField.text?.isEmpty ?? false,
-            self.passwordTextField.text?.isEmpty ?? false,
-            self.confirmPasswordTextField.text?.isEmpty ?? false,
-            self.firstNameTextField.text?.isEmpty ?? false,
-            self.lastNameTextField.text?.isEmpty ?? false else {
-//                AccountManager.shared.currentUser = BeBraveUser(firstName: firstName, lastName: lastName, email: email, phoneNumber: phoneNumber)
+        if let firstName = self.firstNameTextField.text,
+            let lastName = self.lastNameTextField.text,
+            let phoneNumber = self.phoneNumberTextField.text,
+            let email = self.emailTextField.text,
+            !(self.passwordTextField.text?.isEmpty ?? false),
+            !(self.confirmPasswordTextField.text?.isEmpty ?? false) {
+                AccountManager.shared.currentUser = BeBraveUser(firstName: firstName, lastName: lastName, email: email, phoneNumber: phoneNumber)
                 return true
         }
         return false
     }
+    
+    func errorLabelShow(errorString: String) -> Bool {
+        self.errorLabel.text = errorString
+        self.errorLabel.isHidden = false
+        return false
+    }
+    
+    func errorLabelHide() -> Bool {
+        self.errorLabel.text = nil
+        self.errorLabel.isHidden = true
+        return true
+    }
+    
+    func checkForEmptyTextField(before currentTextField: UITextField) {
+        var numOfEmptyBeforeCurrentTextField = 0
+        for textField in textFieldsToValidate ?? [] where textField.tag < currentTextField.tag {
+            if textField.text?.isEmpty ?? true {
+                textField.changeTextFieldTo(color: UIColor.red)
+                numOfEmptyBeforeCurrentTextField += 1
+            }
+        }
+        if numOfEmptyBeforeCurrentTextField > 0 {self.errorLabelShow(errorString: String.multipleInvalidFormFieldsErrorMessage)}
+    }
+    
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -117,30 +150,7 @@ extension SignUpViewcontroller: UITextFieldDelegate {
             }
         }
     }
-    
-    func errorLabelShow(errorString: String) -> Bool {
-        self.errorLabel.text = errorString
-        self.errorLabel.isHidden = false
-        return false
-    }
-    
-    func errorLabelHide() -> Bool {
-        self.errorLabel.text = nil
-        self.errorLabel.isHidden = true
-        return true
-    }
-    
-    func checkForEmptyTextField(before currentTextField: UITextField) {
-        var numOfEmptyBeforeCurrentTextField = 0
-        for textField in textFieldsToValidate ?? [] where textField.tag < currentTextField.tag {
-            if textField.text?.isEmpty ?? true {
-                textField.changeTextFieldTo(color: UIColor.red)
-                numOfEmptyBeforeCurrentTextField += 1
-            }
-        }
-        if numOfEmptyBeforeCurrentTextField > 0 {self.errorLabelShow(errorString: String.multipleInvalidFormFieldsErrorMessage)}
-    }
-    
+
 }
 
 extension FormValidator {
