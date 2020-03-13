@@ -49,6 +49,10 @@ extension UITextField {
         let color = UIColor.lightText
         self.attributedPlaceholder = NSAttributedString(string: text, attributes: [NSAttributedString.Key.foregroundColor:color])
     }
+    
+    func changeTextFieldTo(color: UIColor) {
+        self.layer.sublayers?.filter{$0.name == "line"}.first?.borderColor = color.cgColor
+    }
 }
 
 class NameTextField: UITextField {

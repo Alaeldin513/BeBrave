@@ -26,70 +26,63 @@ class SignUpViewcontroller: UIViewController {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
-    var ref: DatabaseReference!
-    var formValidation: FormValidation?
+    var textFieldValidator: FormValidator?
+    var textFieldsToValidate:[UITextField]?
+    var isFormValid = false
     
     override func viewDidLoad() {
-        ref = Database.database().reference()
         keyboardPushesViewUpWhenTapped()
         hideKeyboardWhenTappedAround()
         confirmPasswordTextField.validationRules? = [StringValueMatchRule(base: passwordTextField)]
-        self.formValidation = FormValidation(itemsToValidate: [firstNameTextField,
-                                                               lastNameTextField,
-                                                               emailTextField,
-                                                               phoneNumberTextField,
-                                                               passwordTextField,
-                                                               confirmPasswordTextField])
+        self.textFieldsToValidate = [firstNameTextField,
+                                     lastNameTextField,
+                                     emailTextField,
+                                     phoneNumberTextField,
+                                     passwordTextField,
+                                     confirmPasswordTextField]
+        self.textFieldValidator = FormValidator(itemsToValidate: textFieldsToValidate ?? [] )
         self.errorLabel.isHidden = true
     }
     
     @IBAction func signUp(_ sender: Any) {
-        if validateTextFields() {
+        if self.isFormValid {
             FirebaseAccountManager.signUpUserWith(email: emailTextField.text!, password: passwordTextField.text!){ [weak self] (result) in
                 switch result {
                 case .success(let firebaseUser):
                     AccountManager.shared.currentUser?.firebaseAccount = firebaseUser
                     self?.performSegue(withIdentifier:"UserInformationSegue" , sender: self)
                 case .failure(let error):
-                    self?.errorLabel.text = FirebaseAccountManager.getStringDescriptionFor(error: ((error as! NSError)))
+                    self?.showErrorHud(FirebaseAccountManager.getStringDescriptionFor(error: error as NSError))
                 }
             }
+        } else {
+            self.showErrorHud(String.genericServerErrorMessage)
         }
     }
     
     @IBAction func returnToSignIn(_ sender: UIButton) {
-        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "loginViewController") as! LoginViewController
-        self.present(viewController, animated: true, completion: nil)
+//        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "loginViewController") as! LoginViewController
+//        self.present(viewController, animated: true, completion: nil)
+        self.presentingViewController?.dismiss(animated: true)
     }
     
-    func validateTextFields() -> Bool {
-        guard let email = self.emailTextField.text ,
-            let password = self.passwordTextField.text,
-            let confirmPassword = self.confirmPasswordTextField.text,
-            let firstName = self.firstNameTextField.text,
-            let lastName = self.lastNameTextField.text else {
-                self.showErrorHud(String.fillInRequiredFieldsErrorMessage)
-                return false
+    func createUser() -> Bool {
+        guard self.phoneNumberTextField.text?.isEmpty ?? false,
+            self.emailTextField.text?.isEmpty ?? false,
+            self.passwordTextField.text?.isEmpty ?? false,
+            self.confirmPasswordTextField.text?.isEmpty ?? false,
+            self.firstNameTextField.text?.isEmpty ?? false,
+            self.lastNameTextField.text?.isEmpty ?? false else {
+//                AccountManager.shared.currentUser = BeBraveUser(firstName: firstName, lastName: lastName, email: email, phoneNumber: phoneNumber)
+                return true
         }
-        
-        guard let phoneNumber = self.phoneNumberTextField.text,
-            phoneNumber.count == 10 else {
-                self.showErrorHud(String.enterValidPhoneNumberErrorMessage)
-                return false
-        }
-        
-        guard password == confirmPassword else {
-            self.showErrorHud(String.passwordDontMatchErrorMessage)
-            return false
-        }
-        AccountManager.shared.currentUser = BeBraveUser(firstName: firstName, lastName: lastName, email: email, phoneNumber: phoneNumber)
-        return true
+        return false
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "UserInformationSegue" {
-            let userInformationVC = segue.destination as! UserInformationFormViewController
+            _ = segue.destination as! UserInformationFormViewController
         }
     }
     
@@ -109,63 +102,59 @@ extension SignUpViewcontroller: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        formValidation?.formValidator.validateForm {[weak self] (result) in
-            guard textField.validValue == nil else {
-                if result.errors != nil {
-                    textField.layer.sublayers?[0].borderColor = UIColor.white.cgColor
-                    self?.errorLabel.isHidden = true
+        textFieldValidator?.validateForm {[weak self] (result) in
+            if textField.validValue == nil {
+                let textFieldError = textField.getTextfieldErrorFrom(formValidatorErrors: (result.errors as? [ValidationError] ?? []))
+                if let textFieldErrorMessage = textFieldError?.errorMessage(textFieldType: textField) {
+                    textField.changeTextFieldTo(color: UIColor.red)
+                    self?.isFormValid =  self?.errorLabelShow(errorString: textFieldErrorMessage) ?? false
                     return
                 }
-                return
-            }
-            let textFieldError = textField.getTextfieldErrorFrom(formValidatorErrors: (result.errors as? [ValidationError] ?? []))
-            if let textFieldError = textFieldError {
-                self?.errorLabel.text = textFieldError.errorMessage(textFieldType: textField)
-                self?.errorLabel.textColor = .yellow
-                self?.errorLabel.isHidden = false
-                DispatchQueue.main.async {
-                    textField.layer.sublayers?.filter{$0.name == "line"}.first?.borderColor = UIColor.yellow.cgColor
-                }
+            } else {
+                textField.changeTextFieldTo(color: .white)
+                self?.checkForEmptyTextField(before: textField)
+                self?.isFormValid = result.errors?.count != 0 ? self?.errorLabelHide() ?? true:false
             }
         }
     }
     
+    func errorLabelShow(errorString: String) -> Bool {
+        self.errorLabel.text = errorString
+        self.errorLabel.isHidden = false
+        return false
+    }
     
-    func getNameOf(textField: UITextField) -> String {
-        
-        switch textField.tag {
-        case 0:
-            return "First name"
-        case 1:
-            return "Last name"
-        case 2:
-            return  "Phone number"
-        case 3:
-            return "Email"
-        case 4:
-            return  "Password"
-        case 5:
-            return  "Confirm password"
-        default:
-            return ""
+    func errorLabelHide() -> Bool {
+        self.errorLabel.text = nil
+        self.errorLabel.isHidden = true
+        return true
+    }
+    
+    func checkForEmptyTextField(before currentTextField: UITextField) {
+        var numOfEmptyBeforeCurrentTextField = 0
+        for textField in textFieldsToValidate ?? [] where textField.tag < currentTextField.tag {
+            if textField.text?.isEmpty ?? true {
+                textField.changeTextFieldTo(color: UIColor.red)
+                numOfEmptyBeforeCurrentTextField += 1
+            }
         }
+        if numOfEmptyBeforeCurrentTextField > 0 {self.errorLabelShow(errorString: String.multipleInvalidFormFieldsErrorMessage)}
     }
     
 }
 
-class FormValidation {
-    var formValidator = FormValidator()
-    
-    init( itemsToValidate: [ValidatableInterface]) {
-        self.addItemsToForm(itemsToValidate: itemsToValidate as! [UITextField])
+extension FormValidator {
+    convenience init( itemsToValidate: [ValidatableInterface]) {
+        self.init()
+        addItemsToForm(itemsToValidate: itemsToValidate as! [UITextField])
     }
     
     private func addItemsToForm(itemsToValidate: [UITextField]){
         for item in itemsToValidate {
-            formValidator.add(item)
+            self.add(item)
         }
     }
-    
+        
 }
 
     

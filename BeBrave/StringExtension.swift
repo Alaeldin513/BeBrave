@@ -22,7 +22,7 @@ extension String {
     static let passwordTooShortErrorMessage  = "Password must be at least 8 characters long"
     static let nameFieldTooShortErrorMessage = "Please enter a name that's at least 1 character long."
     static let invalidTypeErrorMessage = "The type is incorrect."
-    static let genericFormMultipleFieldsErrorMessage = "Validation error please check all the fields. Then try again."
+    static let multipleInvalidFormFieldsErrorMessage = "Please correct all the highlighted fields"
     
     
 }
